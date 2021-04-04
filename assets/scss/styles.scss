@@ -133,7 +133,7 @@ nav{
 	background: $black;
 	position: fixed;
 	padding: 0 20px;
-	z-index: 2;
+	z-index: 70;
 	.logo{
 		@include flexContainer(row, center, center);
 		color: $white;
@@ -470,9 +470,8 @@ header{
 	transform: translate(-50%, -50%);
 	z-index: 50;
 	margin: auto;
-
-	// width: 500px;
 	width: 50vw;
+	min-width: 350px;
 	height: 80vh;
 	overflow-y: scroll;
 	border-radius: 10px;
@@ -652,6 +651,26 @@ footer {
 				padding: 20px;
 				transition: color .4s ease-in-out;
 			}
+		}
+	}
+	.project__modal-container{
+		max-width: 90vw;
+		height: unset;
+		max-height: 80vh;
+		.project__modal-container--links{
+			text-align: center;
+			i{
+				padding-right: 10px;
+			}
+			button{
+				margin: 10px 10px;
+			}
+		}
+	}
+	.medical-modal, .kim-modal, .fb-modal{
+		h2{
+			width: 50%;
+			margin: auto;
 		}
 	}
 }
