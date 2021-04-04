@@ -429,7 +429,7 @@ header{
 			&:hover .project-text{
 				opacity: 1;
 				transform: translateY(150px);
-				transition: 1.3s ease-in-out;
+				transition: 1s ease-in-out;
 			}
 			&:hover{
 				transform: scale(1.025);
@@ -487,7 +487,7 @@ header{
 	h3{
 		padding-bottom: 10px;
 	}
-	.close-btn{
+	.close-btn, .hbo-close-btn, .dribbble-close-btn, .bayside-close-btn, .target-close-btn, .kayak-close-btn, .kim-close-btn, .sushi-close-btn, .medical-close-btn, .fb-close-btn{
 		position: absolute;
 		font-size: 30px;
 		top: 10px;
@@ -577,637 +577,85 @@ footer {
 	}
 }
 
-// /* -----------Modal---------------- */
 
-// .kim-modal {
-// 	display: none;
-// 	position: fixed;
-// 	top: 50%;
-// 	left: 50%;
-// 	transform: translate(-50%, -50%);
-// 	margin: auto;
-// 	z-index: 50;
-// 	background-color: rgba(0, 0, 0, 0);
-// 	background-color: rgba(0, 0, 0, 0.4);
-// }
-// .sushi-modal {
-// 	display: none;
-// 	position: fixed;
-// 	top: 50%;
-// 	left: 50%;
-// 	transform: translate(-50%, -50%);
-// 	margin: auto;
-// 	z-index: 50;
-// 	background-color: rgba(0, 0, 0, 0);
-// 	background-color: rgba(0, 0, 0, 0.4);
-	
-// }
-// .medical-modal {
-// 	display: none;
-// 	position: fixed;
-// 	top: 50%;
-// 	left: 50%;
-// 	transform: translate(-50%, -50%);
-// 	margin: auto;
-// 	z-index: 50;
-// 	background-color: rgba(0, 0, 0, 0);
-// 	background-color: rgba(0, 0, 0, 0.4);
-// }
+@media only screen and (max-width: 750px) {
+	nav{
+		.links a {
+			padding: 0 0 0 10px;
+		}
+	}
+	header, .main-banner__headline{
+		@include flexContainer(column, center, center);
+		text-align: center;
+		.main-banner__headline--contact-btn {
+			position: unset;
+			margin-top: 40px;
+		}
+	}
+	.about-myself{
+		padding: 0 20px;
+	}
+	.three-values{
+		@include flexContainer(column, center, center)
+		.three-values__grid{
+			max-width: 80%;
+			.three-values__grid--val1, .three-values__grid--val2, .three-values__grid--val3{
+				img{ 
+					padding: 10px;
+				}
+			}
+		}
+	}
+	.what-i-do{
+		@include flexContainer(column, center, center);
+		h2{
+			margin-bottom: 0;
+			padding-bottom: 20px;
+		}
+		.what-i-do__container{
+		@include flexContainer(column, center, center)
+			.what-i-do__container--sections-container{
+				h3{
+					padding: 10px;
+				}
+				p{
+					padding-bottom: 30px;
+				}
+			}
+		}
+	}
+	.experience{
+		@include flexContainer(column, center, center);
+		width: 90%;
+		align-self: center;
+		padding-right: 0;
+		margin-bottom: 30px;
+		h2{
+			padding-bottom: 20px;
+		}
+		.experience__summary{
+		@include flexContainer(column, center, center);
+		width: 90%;
+		padding: 0 20px 30px;
+		text-align: start;
+			p{
+				text-align: center;
+			}
+		}
+		.experience__skills{
+			align-self: center;
+			width: 90%;
+			flex-wrap: wrap;
+			margin-bottom: 30px;
+			.fab{
+				font-size: 60px;
+				padding: 20px;
+				transition: color .4s ease-in-out;
+			}
+		}
+	}
+}
 
-// .fb-modal {
-// 	display: none;
-// 	position: fixed;
-// 	top: 50%;
-// 	left: 50%;
-// 	transform: translate(-50%, -50%);
-// 	margin: auto;
-// 	z-index: 50;
-// 	background-color: rgba(0, 0, 0, 0);
-// 	background-color: rgba(0, 0, 0, 0.4);
-// }
-// .modal-content {
-// 	display: flex;
-// 	justify-content: center;
-// 	text-align: center;
-// 	align-self: center;
-// 	flex-direction: column;
-// 	width: 700px;
-// 	margin: auto;
-// 	border: 1px solid rgba(0, 0, 0, 0.262);
-// 	background-color: rgba(216, 216, 216, 0.5);
-// 	box-shadow: rgba(0, 0, 0, 0.173) 2px 2px 2px;
-// 	border-radius: 15px;
-// 	z-index: 50;
-// }
-// .modal-content h2{
-// 	font-size: 36px;
-// }
-// .modal-content h3 {
-// 	font-size: 24px;
-// 	padding: 0 0 10px 0;
-// }
-// .container {
-// 	display: flex;
-// 	justify-content: center;
-// 	text-align: center;
-// 	align-self: center;
-// 	flex-direction: column;
-// 	width: 700px;
-// 	margin: auto;
-// 	border: 1px solid rgba(0, 0, 0, 0.262);
-// 	background-color: white;
-	
-// }
-
-// .container img {
-// 	width: 100%;
-// 	margin: auto;
-// 	padding: 0 0 20px 0;
-// 	z-index: 50;
-// }
-
-// .container p {
-// 	padding: 0 0 20px 0;
-// }
-
-// .container li {
-// 	list-style-type: none;
-// 	color: black;
-// }
-
-// .container i {
-// 	font-size: 35px;
-// 	padding: 20px 10px;
-// }
-
-// .modal-header {
-// 	display: flex;
-// 	justify-content: center;
-// 	opacity: 1;
-// 	width: 100%;
-// }
-
-// #modal-btn {
-// 	padding: 2px 4px;
-// 	margin-left: 10px;
-// 	border-radius: 5px;
-// }
-// .modal-header h1 {
-// 	align-self: center;
-// }
-
-// .close-btn {
-// 	position: relative;
-// 	left: 22%;
-// 	background-color: white;
-// 	border: none;
-// 	font-size: 30px;
-// 	background: none;
-// 	cursor: pointer;
-// }
-// .sushi-close-btn {
-// 	position: relative;
-// 	left: 33%;
-// 	background-color: white;
-// 	border: none;
-// 	font-size: 30px;
-// 	background: none;
-// 	cursor: pointer;
-// }
-// .medical-close-btn {
-// 	position: relative;
-// 	left: 20%;
-// 	background-color: white;
-// 	border: none;
-// 	font-size: 30px;
-// 	background: none;
-// 	cursor: pointer;
-// }
-// .fb-close-btn {
-// 	position: relative;
-// 	left: 20%;
-// 	background-color: white;
-// 	border: none;
-// 	font-size: 30px;
-// 	background: none;
-// 	cursor: pointer;
-// }
-
-// #overlay {
-// 	position: fixed;
-// 	top: 0;
-// 	opacity: 0;
-// 	left: 0;
-// 	right: 0;
-// 	bottom: 0;
-// 	background-color: rgba(0, 0, 0, 0.7);
-// 	backdrop-filter: blur(6px);
-// 	z-index: 40;
-// 	pointer-events: none;
-// }
-
-// #overlay.active {
-// 	opacity: 1;
-// 	pointer-events: all ;
-// }
-
-
-// .close:hover,
-// .close:focus {
-// 	color: black;
-// 	text-decoration: none;
-// 	cursor: pointer;
-// }
-
-
-
-// /* --------------------mobile-------------------- */
-
-// @media only screen and (min-width: 651px) and (max-width: 850px) {
-
-// 	h2 {
-// 		font-size: 30px;
-// 	}
-
-// 	.html {
-// 		width: 850px;
-// 	}
-// 	nav {
-// 		margin: 0;
-// 		padding: 0;
-// 		width: 100%;
-// 	}
-// 	.nav {
-// 		padding: 0;
-// 		margin: 0;
-// 		width: 100%;
-// 	}
-// 	.links  {
-// 		padding: 0;
-// 		margin: 0;
-// 	}
-// 	.main-banner__headline h1 {
-// 		font-size: 42px;
-// 	}
-// 	.main-banner__headline h5 {
-// 		font-size: 16px;
-// 	}
-// 	.main-banner__headline {
-// 		display: flex;
-
-// 	}
-// 	.main-banner__headline button {
-// 		padding: 5px 10px;
-// 		justify-content: flex-end;
-// 		align-self: flex-end;
-// 		width: auto;
-// 		/* float: right; */
-// 		border: none;
-// 		font-size: 16px;
-// 		opacity: 0.9;
-// 		cursor: pointer;
-// 		margin: auto;
-// 		/* border-radius: 10px; */
-// 	}
-// 	.main-banner__headline a {
-// 		width: 110px
-// 	}
-// 	.about {
-// 		width: 800px;
-// 	};
-// 	section {
-// 		width: 800px;
-// 	}
-// 	#about {
-// 		width: 800px;
-// 		margin: auto
-// 	}
-
-// 	.about-myself {
-// 		width: 800px;
-// 	}
-// 	.about-myself p {
-// 		width: 750px;
-// 		text-align: center;
-// 		margin: auto
-// 	}
-// 	.what-i-do {
-// 		width: 100%;
-// 		flex-direction: column;
-// 	}
-// 	.nutshell {
-// 		width: 750px;
-// 	}
-// 	.nutbox {
-// 		width: 750px;
-//   }
-
-// 	.nutbox2 {
-// 		width: 100%;
-// 		flex-direction: column;
-// 		justify-content: center;
-// 		align-self: center;
-// 		text-align: center;
-// 	}
-// 	.competencies {
-// 		align-self: center;
-// 	}
-// 	.competencies p {
-// 		padding-bottom: 40px;
-// 	}
-// 	.projects {
-// 		width: 100%;
-// 	}
-// 	.projects2 {
-// 		width: 100%;
-// 	}
-// 		.main-banner {
-// 			width: 100%;
-// 		}
-// 	.experience__skills {
-// 		width: 90%;
-// 	}
-// 	.experience__skills .fab {
-// 		font-size: 60px;
-// 	}
-// 	.about {
-// 		width: 850px;
-// 	}
-// 	.modal-content {
-// 		display: flex;
-// 		justify-content: center;
-// 		text-align: center;
-// 		align-self: center;
-// 		flex-direction: column;
-// 		width: 450px;
-// 		margin: auto;
-// 		border: 1px solid rgba(0, 0, 0, 0.262);
-// 		background-color: rgba(216, 216, 216, .5);
-// 		box-shadow: rgba(0, 0, 0, 0.173) 2px 2px 2px;
-// 		border-radius: 15px;
-// 		z-index: 50;
-// 	}
-// 	.kim-modal, .sushi-modal, .medical-modal {
-// 		display: none;
-// 		position: fixed;
-// 		width: 450px;
-// 		top: 50%;
-// 		left: 50%;
-// 		transform: translate(-50%, -50%);
-// 		margin: auto;
-// 		z-index: 50;
-// 		background-color: rgba(0, 0, 0, 0);
-// 		background-color: rgba(0, 0, 0, 0.4);
-// 	}
-// 	.container {
-// 		width: 100%;
-// 	}
-
-// 	.container p {
-// 		width: 90%;
-// 	}
-// 	.close-btn {
-// 		position: relative;
-// 		left: 7%;
-// 		background-color: white;
-// 		border: none;
-// 		font-size: 30px;
-// 		background: none;
-// 		cursor: pointer;
-// 	}
-// 	.sushi-close-btn {
-// 		position: relative;
-// 		left: 29%;
-// 		background-color: white;
-// 		border: none;
-// 		font-size: 30px;
-// 		background: none;
-// 		cursor: pointer;
-// 	}
-// 	.medical-close-btn {
-// 		position: relative;
-// 		left: 7%;
-// 		background-color: white;
-// 		border: none;
-// 		font-size: 30px;
-// 		background: none;
-// 		cursor: pointer;
-// 	}
-// }
-
-// @media only screen and (max-width: 650px) {
-// 	nav {
-// 		justify-content: space-between;
-// 		padding: 0 5px;
-// 		width: 100%;
-//   }
-//   .logo{
-//     width: 60px
-//   }
-// 	.logo p {
-// 		display: none;
-// 	}
-
-// 	.links a {
-// 		font-size: 16px;
-// 	}
-
-// 	.links li {
-// 		margin: 0 3px;
-// 		padding: 0 5px;
-// 		align-self: center;
-// 	}
-
-// 	.links button {
-// 		padding: 5px;
-// 		margin: 0;
-// 	}
-
-// 	h1 {
-// 		font-size: 64px;
-// 	}
-
-// 	h2 {
-// 		font-size: 36px;
-// 	}
-
-// 	h3 {
-// 		font-size: 4rem;
-// 	}
-
-// 	h4 {
-// 		font-size: 3rem;
-// 	}
-
-// 	h5 {
-// 		font-size: 24px;
-// 	}
-// 	.nav {
-// 		padding: 0 10px;
-// 	}
-
-// 	.nav li {
-// 		padding: 10px;
-//   }
-//   .no-contact{
-//     display: none;
-//   }
-
-// 	.main-banner {
-// 		width: 100%;
-// 		height: 800px;
-// 		background-size: cover;
-// 		background-position: bottom center;
-// 		position: relative;
-// 	}
-// 	.main-banner__headline {
-// 		left: 0;
-// 		padding: 0;
-// 		justify-content: center;
-// 		text-align: center;
-// 	}
-	
-// 	.main-banner__headline--contact-btn{
-// 		bottom: -110px;
-// 		right: 32%;
-// 	}
-
-// 	.main-banner__headline a{
-// 		justify-content: center;
-// 		align-self: center;
-// 	}
-
-// 		.main-banner__headline--contact-btn {
-// 			float: none;
-// 		}
-// 		/* ----------about--------------- */
-// 	.about {
-// 		width: 100%;
-// 		margin: 10px 5px;
-// 	}
-
-// 	.about p {
-// 		width: 90%;
-// 		margin: auto;
-//   }
-//   .nutbox {
-//     grid-template-columns: 2% 1fr 1fr 1fr 2%;
-//   }
-// 	/* ------------what-i-do------------ */
-// 	.main-banner__headline {
-// 		top: 20vh;
-// 	}
-
-// 	.nutshell {
-// 		width: 100%;
-// 		flex-direction: column;
-// 		padding: 0 auto 30px auto;
-// 		height: 300px;
-// 	}
-
-// 	.nutshell img {
-// 		height: 80px;
-// 	}
-
-// 	.what-i-do {
-// 		width: 100%;
-// 		margin-top: 0px;
-// 		display: block;
-// 		height: auto;
-// 		background-color: white;
-// 	}
-
-// 	.nutbox2 {
-// 		padding: 0;
-// 		margin: 0;
-// 		width: 100%;
-// 		display: flex;
-// 		flex-direction: column;
-// 	}
-
-// 	.nutbox2 p {
-// 		width: 90%;
-// 		margin: auto;
-// 		padding-bottom: 50px;
-// 	}
-
-// 	.fab {
-// 		font-size: 50px;
-// 	}
-// 	.experience {
-// 		text-align: center;
-// 		height: auto;
-// 		width: 100%;
-// 		background-color: #F0F0F0;
-// 	}
-
-// 	.experience h2 {
-// 		padding: 20px;
-// 	}
-// 	/* --------experience----------- */
-// 	.experience p {
-// 		width: 90%;
-// 		text-align: center;
-// 		margin: 0 auto;
-// 		padding: 50px auto 30px auto;
-// 	}
-
-// 	.experience__skills {
-// 		text-align: center;
-//     justify-content: space-evenly;
-//     flex-wrap: wrap;
-//     max-width: 250px;
-// 		height: auto;
-// 		width: auto;
-// 		padding-bottom: 30px;
-// 	}
-  
-// 	.experience__skills .fab {
-//     font-size: 40px;
-//     padding: 10px;
-// 	}
-
-// 	/* ----------what-ive-done--------- */
-// 	.projects {
-// 		display: flex;
-// 		flex-direction: column;
-// 		padding: 0;
-// 		margin: 0;
-// 		width: 100%;
-// 		height: auto;
-// 	}
-
-// 	.projects2 {
-// 		display: flex;
-// 		flex-direction: column;
-// 		padding: 0;
-// 		margin: 0;
-// 		width: 100%;
-// 		height: auto;
-// 	}
-
-// 	.project {
-// 		width: 95%;
-// 		height: 200px;
-// 		padding: 30px 0;
-// 		margin: 30px auto 30px auto;
-// 	}
-
-// 	#hide {
-// 		display: none;
-// 	}
-
-// 	.fab,
-// 	.fas {
-// 		font-size: 25px;
-// 	}
-// 	.modal-content {
-// 		display: flex;
-// 		justify-content: center;
-// 		text-align: center;
-// 		align-self: center;
-// 		flex-direction: column;
-// 		width: 350px;
-// 		margin: auto;
-// 		border: 1px solid rgba(0, 0, 0, 0.262);
-// 		background-color: rgba(216, 216, 216, 1);
-// 		box-shadow: rgba(0, 0, 0, 0.173) 2px 2px 2px;
-// 		border-radius: 15px;
-// 		z-index: 50;
-// 	}
-
-// 	.modal-content h2 {
-// 		font-size: 24px;
-// 	}
-// 	.kim-modal, .sushi-modal, .medical-modal {
-// 		display: none;
-// 		position: fixed;
-// 		width: 350px;
-// 		top: 50%;
-// 		left: 50%;
-// 		transform: translate(-50%, -50%);
-// 		margin: auto;
-// 		z-index: 50;
-// 		background-color: rgba(0, 0, 0, 0);
-// 		background-color: rgba(0, 0, 0, 0.4);
-// 		height: 550px;
-// 		overflow-y: auto;
-// 	}
-// 	.container {
-// 		width: 100%;
-// 	}
-
-// 	.container p {
-// 		width: 90%;
-// 	}
-// 	.close-btn {
-// 		position: relative;
-// 		left: 7%;
-// 		background-color: white;
-// 		border: none;
-// 		font-size: 30px;
-// 		background: none;
-// 		cursor: pointer;
-// 	}
-// 	.sushi-close-btn {
-// 		position: relative;
-// 		left: 29%;
-// 		background-color: white;
-// 		border: none;
-// 		font-size: 30px;
-// 		background: none;
-// 		cursor: pointer;
-// 	}
-// 	.medical-close-btn {
-// 		position: relative;
-// 		left: 7%;
-// 		background-color: white;
-// 		border: none;
-// 		font-size: 30px;
-// 		background: none;
-// 		cursor: pointer;
-// 	}
-// };
 
 
 
