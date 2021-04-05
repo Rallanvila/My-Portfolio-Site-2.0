@@ -88,7 +88,6 @@ $global-btn-border-radius: 25px;
 		}
 	}
   }
-
 // Universal Setting============
 * {
 	padding: 0;
@@ -290,7 +289,6 @@ header{
 	@include push--auto;
 	display:flex;
 	max-width: $max-width;
-	height: 500px;
 	margin-top: 50px;
 	h2{
 		padding-bottom: 30px;
@@ -399,7 +397,8 @@ header{
 		max-width: $max-width-wide;
 
 		.my-projects__project-container--project{
-			width: 400px;
+			max-width: 400px;
+			min-width: 350px;
 			height: 250px;
 			position: relative;
 			display: flex;
@@ -413,7 +412,8 @@ header{
 				top: 0;
 				left: 0;
 				display: block;
-				width: 400px;
+				max-width: 400px;
+				min-width: 350px;
 				height: 250px;
 				background: linear-gradient(to top, $black, transparent);
 				z-index: 2;
@@ -438,7 +438,8 @@ header{
 				opacity: 1;
 			}
 			img{
-				width: 400px;
+				max-width: 400px;
+				min-width: 350px;
 				height: 250px;
 				position: absolute;
 				object-fit: cover;
@@ -525,7 +526,6 @@ header{
 		}
 	}
 }
-
 #overlay, .overlay {
 	position: fixed;
 	top: 0;
@@ -542,15 +542,12 @@ header{
 		pointer-events: all;
 	}
 }
-
 .close:hover,
 .close:focus {
 	color: black;
 	text-decoration: none;
 	cursor: pointer;
 }
-
-
 // Footer===========================
 footer {
 	text-align: center;
@@ -575,10 +572,12 @@ footer {
 		}
 	}
 }
-
-
+//Media==============================
 @media only screen and (max-width: 750px) {
 	nav{
+		.logo p{
+			display: none;
+		}
 		.links a {
 			padding: 0 0 0 10px;
 		}
