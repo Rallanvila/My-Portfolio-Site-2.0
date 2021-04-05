@@ -11,4 +11,11 @@ Project is created with:
 * Babel
 * Json
 * Webpack
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 7fa0ccab7b75b8d273b44a3cc5fc4e57fc7b6194
 
