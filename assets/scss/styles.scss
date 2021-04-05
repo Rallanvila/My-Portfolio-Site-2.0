@@ -397,8 +397,7 @@ header{
 		max-width: $max-width-wide;
 
 		.my-projects__project-container--project{
-			max-width: 400px;
-			min-width: 350px;
+			width: 400px;
 			height: 250px;
 			position: relative;
 			display: flex;
@@ -412,8 +411,7 @@ header{
 				top: 0;
 				left: 0;
 				display: block;
-				max-width: 400px;
-				min-width: 350px;
+				width: 400px;
 				height: 250px;
 				background: linear-gradient(to top, $black, transparent);
 				z-index: 2;
@@ -438,8 +436,7 @@ header{
 				opacity: 1;
 			}
 			img{
-				max-width: 400px;
-				min-width: 350px;
+				width: 400px;
 				height: 250px;
 				position: absolute;
 				object-fit: cover;
@@ -654,20 +651,6 @@ footer {
 				font-size: 60px;
 				padding: 20px;
 				transition: color .4s ease-in-out;
-			}
-		}
-	}
-	.project__modal-container{
-		max-width: 90vw;
-		height: unset;
-		max-height: 80vh;
-		.project__modal-container--links{
-			text-align: center;
-			i{
-				padding-right: 10px;
-			}
-			button{
-				margin: 10px 10px;
 			}
 		}
 	}
