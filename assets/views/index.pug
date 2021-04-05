@@ -1,33 +1,469 @@
-extends layouts/app 
-
-block seo 
-  title CodingPhase - Learn To Code and Get Paid ASAP!
-  meta(property='og:title', content='CodingPhase - Learn To Code and Get Paid ASAP!')
-  meta(name='description', content='Learn how to code from the best platform by building real projects that will help you land the dream job and get a high paying salary')
-  meta(property='og:description', content='Learn how to code from the best platform by building real projects that will help you land the dream job and get a high paying salary')
-  meta(property='og:image', content='https://codingphase.com/img/websitethumb.png')
-  meta(name='twitter:card', content='summary_large_image')
-  meta(property='og:site_name', content='CodingPhase LLC')
-  meta(name='twitter:image:alt', content='Learn how to code from one of the best platforms online.')
-  meta(name='twitter:site', content='@codingphase')
-  meta(property='og:url', content='https://codingphase.com')
-  link(rel="canonical" href="/")
-
-block content
-  #app
-    .home
-      .Aligner
-        .Aligner-item
-          img(src='/img/logo.png', alt='codingphase logo')
-          h1 Dev-Starter-Kit
-          .menu
+doctype html
+html(lang='en')
+  head
+    title HTML Email Developer
+    meta(name='description' content='Allan Vila is an HTML Email Web Developer')
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    meta(name='theme-color' content='#ad38f1')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    meta(http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate')
+    meta(http-equiv='Pragma' content='no-cache')
+    meta(http-equiv='Expires' content='0')
+    link(rel='manifest' href='/manifest.json')
+    link(rel='stylesheet' href='/css/styles.css')
+    link(rel='preconnect' href='https://fonts.gstatic.com')
+    link(href='https://fonts.googleapis.com/css2?family=Poppins&family=Zilla+Slab&display=swap' rel='stylesheet')
+    link(rel='stylesheet' href='path/to/font-awesome/css/font-awesome.min.css')
+    script(src='https://kit.fontawesome.com/d7ee0cd118.js' crossorigin='anonymous')
+    script(async='' defer='' src='https://buttons.github.io/buttons.js')
+  body
+    // ---------Nav Bar----------
+    nav
+      .logo
+        img(src='./img/Logo White.png' alt='r.allanvila logo')
+        p Allan Vila
+      .links
+        a(href='#about') About
+        a(href='#experience') Experience
+        a(href='#my-projects') My Projects
+    // ----------Main Banner-----------
+    header
+      .main-banner__overlay
+      .main-banner__headline
+        h1.main-banner__headline--animation Hey there, I'm Allan
+        span.webdev HTML Email / Web Developer
+        button.main-banner__headline--contact-btn
+          a(href='mailto:r.allanvila@gmail.com') Contact Me
+    // -------About me--------
+    main
+      section#about.about
+        .about-myself
+          h2 A LITTLE ABOUT MYSELF
+          img.about__profile-pic(src='./img/Profile Pic.png' alt='Profile Picture')
+          p
+            | 👋🏼 My name is Allan and I’m a web developer with a passion for constructing things for the web and humanity. I’m currently a business professional in Fin-Tech SMB sales. I've been in SMB sales for the past six years. I aspire to break in toward an exciting career in technology that will allow me to channel my logic through creating amazing software and design that helps humanity simplify the way we live.
+            br
+            br
+            |                    When I’m not out in the field or camping in front of my screen, I'm a little bit of an adrenaline junkie, I enjoy my soon-to-be fiancé  and two children and finding new memorable experiences.
+        .three-values
+          h2 ME IN A NUTSHELL..
+          .three-values__grid
+            .three-values__grid--val1
+              img(src='./img/Keyboard.png' alt='keyboard and mouse')
+            .three-values__grid--val2
+              img(src='./img/Family.png' alt='family stick figures')
+            .three-values__grid--val3
+              img#ruler(,='' src='./img/Ruller.png' alt='Pen and ruler')
+            .three-values__grid--desc1
+              p Developer
+            .three-values__grid--desc2
+              p Family
+            .three-values__grid--desc3
+              p Pixel Perfect UX
+      // -------------What I Do-------------
+      section.what-i-do
+        h2 WHAT I DO
+        .what-i-do__container
+          .what-i-do__container--sections-container
+            img.do-img(,='' src='./img/Design.png' alt='Paint Board')
+            h3 Design
+            br
+            p
+              | Design isn't just about the look of the website, it's largely about the feel that creates the experience. I strive to design pixel perfect experiences that look and feel amazing for the end user.
+          .what-i-do__container--sections-container
+            img.do-img(,='' src='./img/Development.png' alt='Code Sign')
+            h3 Develop
+            br
+            p
+              | I love the ability to engineer a product based off the user's specific needs. As I grow as a developer, I want to write clean code that can be shared and leveraged to create amazing new things.
+          .what-i-do__container--sections-container
+            img.do-img(,='' src='./img/Learner.png' alt='Graduation Cap')
+            h3 Learn
+            br
+            p
+              | I'm a motivated learner that's always self-improving. I balance a 60hr B2B sales work week, being a loving partner and father of two. I continue to grow my skills on and outside of the job for my family's future
+      // ------------Experience---------------
+      section#experience.experience
+        .experience__summary
+          h2 MY EXPERIENCE
+          p
+            | I’ve been doing web development for one year now. I love the fast paced industry
+            | and new technologies developed to improve our quality of life. I  love finding a deep understanding of core languages to further grow my portfolio investing in myself & family's future.
+        .experience__skills
+          i.fab.fa-github
+          i.fab.fa-react
+          i.fab.fa-html5
+          i.fab.fa-css3-alt
+          i.fab.fa-js-square
+          i.fab.fa-sass
+          i.fab.fa-npm
+          i.fab.fa-gulp
+          i.fab.fa-node-js
+          i.fab.fa-figma
+          i.fab.fa-sketch
+      // -----------Resume-----------------
+      section.resume
+        .resume__overlay
+        .resume__headline
+          h2 CHECK OUT MY RÉSUMÉ!
+          button.resume__btn
+            a.resume__btn--link(href="./downloads/Allan Vila's Resume.pdf" target='_blank')
+              | Snag It Here
+      // --------What I've Done--------
+      section#my-projects.my-projects
+        h2 LOOK AT SOME OF MY WORK
+        p (Adding More Monthly)
+        //
+          <div class="my-projects-filter">
+          <div class="my-projects-filter__button">
+          <button>
+          <a href="#">HTML Emails</a>
+          </button>
+          </div>
+          <div class="my-projects-filter__button">
+          <button>
+          <a href="#">Landing Pages</a>
+          </button>
+          </div>
+          <div class="my-projects-filter__button">
+          <button>
+          <a href="#">In Progress</a>
+          </button>
+          </div>
+          </div>
+        // My List of Projects
+        .my-projects__project-container
+          // HBOMax HTML Email
+          #html-email.my-projects__project-container--project
+            img(src='./img/HBOMax Newsletter.png' alt='')
+            .project-text
+              h5 HBO Max Newsletter HTML Email
+              button#hbo-btn More Info
+          // HBOMax Modal
+          .hbo-modal.project__modal-container
+            h2 HBOMAX
+            h3 HTML Newsletter Email
+            span#hbo-close-btn.hbo-close-btn ×
+            .project__modal-container--content
+              img(src='./img/HBOMax Newsletter.png' alt='HBOMax Email')
+              p
+                | This is a fully customizable HTML Newsletter Email / Template written from scratch. I've setup data entry points that allow anybody to only change the image files and descriptions. This way, the same template can be used and rotated in an HTML email marketing campaign. 
+                br
+                br
+                |  The styling has been written with Sass. The Sass is then compiled and the images are minified for optimal performance into a master HTML file. The master index.html has everything compiled to inline HTML in order to work in all email clients. 😎
+                br
+              h3 Lessons Learned
+              ul
+                li Pixel Perfect Design Replication
+                li How to set variables and @mixins for brand consistent code
+                li How to set a JS data file to easily change data for email campaigns
+                li Create proper table layouts for image and summary sections
+                li Writing reusable code for minimal editing when changing content
+              .project__modal-container--links
+                button
+                  a(href='./project_pages/hbomax.html' target='_blank')
+                    i#container-i.fas.fa-external-link-alt
+                    | View Email
+                button
+                  a(href='https://github.com/Rallanvila/HBO-Max-Email' target='_blank')
+                    i#container-i.fab.fa-github("='')
+                    | View Code
+          // Dribbble HTML Email
+          #html-email.my-projects__project-container--project
+            img(src='./img/Dribble Newsletter.png' alt='Dribble')
+            .project-text
+              h5 Dribbble Newsletter HTML Email
+              p
+                button#dribbble-btn
+                  | more info
+          // Dribbble Modal
+          .dribbble-modal.project__modal-container
+            h2 DRIBBBLE
+            h3 HTML Email
+            span#dribbble-close-btn.dribbble-close-btn ×
+            .project__modal-container--content
+              img(src='./img/Dribble Newsletter.png' alt='Dribble')
+              p
+                | This is a fully customizable HTML Newsletter Email / Template written from scratch. I've setup data entry points that allow anybody to only change the image files and descriptions. This way, the same template can be used and rotated in an HTML email marketing campaign. 
+                br
+                br
+                |  The styling has been written with Sass. The Sass is then compiled and the images are minified for optimal performance into a master HTML file. The master index.html has everything compiled to inline HTML in order to work in all email clients. 🤓
+              h3 Lessons Learned
+              ul
+                li Pixel Perfect Design Replication
+                li How to set variables and @mixins for brand consistent code
+                li How to set a JS data file to easily change data for email campaigns
+                li Create proper table layouts for image and summary sections
+                li Writing reusable code for minimal editing when changing content
+              .project__modal-container--links
+                button
+                  a(href='./project_pages/dribbble.html' target='_blank')
+                    i#container-i.fas.fa-external-link-alt
+                    | View Email
+                button
+                  a(href='https://github.com/Rallanvila/Dribble-Email' target='_blank')
+                    i#container-i.fab.fa-github("='')
+                    | View Code
+          // Bayside HTML Email
+          #html-email.my-projects__project-container--project
+            img(src='./img/Bayside Newsletter.png' alt='')
+            .project-text
+              h5 Bayside Newsletter HTML Email
+              p
+                button#bayside-btn
+                  | more info
+          // Bayside Modal
+          .bayside-modal.project__modal-container
+            h2 BAYSIDE
+            h3 HTML Newsletter Email
+            span#bayside-close-btn.bayside-close-btn ×
+            .project__modal-container--content
+              img(src='./img/Bayside Newsletter.png' alt='Bayside Email')
+              p
+                | This is a fully customizable HTML Newsletter Email / Template written from scratch. I've setup data entry points that allow anybody to only change the image files and descriptions. This way, the same template can be used and rotated in an HTML email marketing campaign. 
+                br
+                br
+                |  The styling has been written with Sass. The Sass is then compiled and the images are minified for optimal performance into a master HTML file. The master index.html has everything compiled to inline HTML in order to work in all email clients. 🤓
+              h3 Lessons Learned
+              ul
+                li Pixel Perfect Design Replication
+                li Simple email layout with images as links to bring the user to desired content
+                li
+                  | How to set a JS data file to easily change images and links to reuse template in an email campaign
+                li Writing reusable code for minimal editing when changing content
+              .project__modal-container--links
+                button
+                  a(href='./project_pages/bayside.html' target='_blank')
+                    i#container-i.fas.fa-external-link-alt
+                    | View Email
+                button
+                  a(href='https://github.com/Rallanvila/Bayside-Emails' target='_blank')
+                    i#container-i.fab.fa-github("='')
+                    | View Code
+          // Target HTML Email
+          #html-email.my-projects__project-container--project
+            img(src='./img/Target Transactional.png' alt='Target Email')
+            .project-text
+              h5 Target Transactional HTML Email
+              p
+                button#target-btn
+                  | more info
+          // Target Modal
+          .target-modal.project__modal-container
+            h2 TARGET
+            h3 HTML Transactional Email
+            span#target-close-btn.target-close-btn ×
+            .project__modal-container--content
+              img(src='./img/Target Transactional.png' alt='Target Email')
+              p
+                | This is a fully customizable HTML Newsletter Email / Template written from scratch. I've setup data entry points that allow anybody to only change the image files and descriptions. This way, the same template can be used and rotated in an HTML email marketing campaign. 
+                br
+                br
+                |  The styling has been written with Sass. The Sass is then compiled and the images are minified for optimal performance into a master HTML file. The master index.html has everything compiled to inline HTML in order to work in all email clients. 🥳
+                br
+              h3 Lessons Learned
+              ul
+                li Pixel Perfect Design Replication
+                li How to set variables and @mixins for brand consistent code
+                li How to set a JS data file to easily change data for email campaigns
+                li Create proper table layouts for image and summary sections
+                li Writing reusable code for minimal editing when changing content
+              .project__modal-container--links
+                button
+                  a(href='./project_pages/target.html' target='_blank')
+                    i#container-i.fas.fa-external-link-alt
+                    | View Email
+                button
+                  a(href='https://github.com/Rallanvila/Target-Email' target='_blank')
+                    i#container-i.fab.fa-github("='')
+                    | View Code
+          // Kayak HTML Email
+          #html-email.my-projects__project-container--project
+            img(src='./img/Kayak Promo .png' alt='Kayak Project')
+            .project-text
+              h5 Kayak Promo HTML Email
+              p
+                button#kayak-btn
+                  | more info
+          // Kayak Modal
+          .kayak-modal.project__modal-container
+            h2 KAYAK
+            h3 HTML Promo Email
+            span#kayak-close-btn.kayak-close-btn ×
+            .project__modal-container--content
+              img(src='./img/Kayak Promo .png' alt='Kayak Project')
+              p
+                | This is a fully customizable HTML Newsletter Email / Template written from scratch. I've setup data entry points that allow anybody to only change the image files and descriptions. This way, the same template can be used and rotated in an HTML email marketing campaign. 
+                br
+                br
+                |  The styling has been written with Sass. The Sass is then compiled and the images are minified for optimal performance into a master HTML file. The master index.html has everything compiled to inline HTML in order to work in all email clients. 🙌🏼
+                br
+              h3 Lessons Learned
+              ul
+                li Pixel Perfect Design Replication
+                li How to set variables and @mixins for brand consistent code
+                li How to set a JS data file to easily change data for email campaigns
+                li Create proper table layouts for image and summary sections
+                li Writing reusable code for minimal editing when changing content
+              .project__modal-container--links
+                button
+                  a(href='./project_pages/kayak.html' target='_blank')
+                    i#container-i.fas.fa-external-link-alt
+                    | View Email
+                button
+                  a(href='https://github.com/Rallanvila/Kayak-HTML-Email' target='_blank')
+                    i#container-i.fab.fa-github("='')
+                    | View Code
+          // Kimberly Financial Landing Page
+          #landing-page.my-projects__project-container--project
+            img(src='./img/Kimberly Financial.png' alt='')
+            .project-text
+              h5 Kimberly Financial
+              button#kim-btn
+                | more info
+          // Kimberly Financial Modal
+          .kim-modal.project__modal-container
+            h2 KIMBERLY FINANCIAL
+            h3 Landing Page
+            span#close-btn.close-btn ×
+            .project__modal-container--content
+              img(src='./img/Kimberly Financial.png' alt='Kimberly Financial')
+              p
+                | Kimberly Financial is a website that I've been working on for Kim's financial institution that she's building. Kim explained the services she provides her clients. I presented a wireframe with the client to gain agreement of the concept. After brainstorming ideas with Kim I designed the website from scratch in Figma to provide a concept. After we agreed on the design I wrote the landing page for her.
+              h3 Lessons Learned
+              ul
+                li How to wireframe a concept
+                li how to design a concept in figma
+                li Discussing and Delivering customer expectations
+                li Staying nimble and adapt to client requested changes
+                li Properly quoting SLA times
+              .project__modal-container--links
+                button
+                  a(href='https://rallanvila.github.io/Kimberly-Financial/' target='_blank')
+                    i#container-i.fas.fa-external-link-alt
+                    | Visit Page
+                button
+                  a(href='https://github.com/Rallanvila/Kimberly-Financial' target='_blank')
+                    i#container-i.fab.fa-github("='')
+                    | View Code
+          // Sushi911 Landing Page
+          #landing-page.my-projects__project-container--project
+            img(src='./img/911Sushi.png' alt='')
+            .project-text
+              h5 911 Sushi
+              p
+                button#sushi-btn
+                  | more info
+          // Sushi911 Modal
+          .sushi-modal.project__modal-container
+            h2 911 Sushi
+            h3 Landing Page
+            span#sushi-close-btn.sushi-close-btn ×
+            .project__modal-container--content
+              img(src='./img/911Sushi.png' alt='911 Sushi')
+              p
+                | Sushi 911 is a restaurant that that is opening locally that will be opening in the coming months. They're currently under construction. I'll be putting an Opentable API for reservations while also integrating "order now" functionality once they decide on an ordering service.
+              h3 Lessons Learned
+              ul
+                li Wireframe concept
+                li Design concept in Figma
+                li Discussing and Delivering customer expectations
+                li Coming Soon: Opentable API
+                li Coming Soon: Integrating an Order Now API
+              .project__modal-container--links
+                button
+                  a(href='https://rallanvila.github.io/911-Sushi/' target='_blank')
+                    i#container-i.fas.fa-external-link-alt
+                    | Visit Page
+                button
+                  a(href='https://github.com/Rallanvila/911-Sushi' target='_blank')
+                    i#container-i.fab.fa-github("='')
+                    | View Code
+          // Sarasota Med Landing Page
+          #landing-page.my-projects__project-container--project
+            img(src='./img/Sarasota Medical.png' alt='')
+            .project-text
+              h5 Sarasota Medical
+              p
+                button#medical-btn
+                  | more info
+          // Sarasota Med Modal
+          .medical-modal.project__modal-container.kim-modal
+            h2 SARASOTA MEDICAL
+            h3 Landing Page
+            span#medical-close-btn.medical-close-btn ×
+            .project__modal-container--content
+              img(src='./img/Sarasota Medical.png' alt='Sarasota Medical')
+              p
+                | Sarasota Medical is a generic medical site that I built. There are a quite a few partners of mine that specialize in medical sales. I built this to showcase my eye for design compared to local medical websites for referral opportunities
+              h3 Lessons Learned
+              ul
+                li Designing in Figma
+                li Custom SVG Creation
+                li Manipulating the grid
+                li Coming Soon: Calendar API for booking medical appointments
+                li Coming Soon: Form Library
+              .project__modal-container--links
+                button
+                  a(href='https://rallanvila.github.io/Sarasota-Medical/' target='_blank')
+                    i#container-i.fas.fa-external-link-alt
+                    | Visit Page
+                button
+                  a(href='https://github.com/Rallanvila/Sarasota-Medical' target='_blank')
+                    i#container-i.fab.fa-github("='')
+                    | View Code
+          // FB Clone Landing Page
+          #landing-page.my-projects__project-container--project
+            img(src='./img/Facebook Clone.png' alt='')
+            .project-text
+              h5 Facebook Clone
+              p
+                button#fb-btn
+                  | more info
+        // FB Clone Modal
+        .fb-modal.project__modal-container
+          h2 FACEBOOK CLONE
+          h3 Landing Page
+          span#fb-close-btn.fb-close-btn ×
+          .project__modal-container--content
+            img(src='./img/Facebook Clone.png' alt='Facebook Clone')
+            p
+              | The purpose of My Facebook Clone project was to push my front-end capabilities by writing more complex code with deeper embedded divs. I discovered BEM formatting for writing clean code that others can view and edit more easily throughout a team environment on a larger a codebase.
+            h3 Lessons Learned
             ul
-              li
-                a(href='http://starterkit.codingphase.com', target='new') Documentation
-              li
-                a(href='http://www.codingphase.com', target='new') CodingPhase.Com
-          .version-num version 4.0.0
-      
-  script(src='/js/dist/vendors~FirstComp.js')
-  script(src='/js/dist/FirstComp.js')
-  script(src='/js/dist/main.js')
+              li CSS Variables for consistency
+              li Writing Clean Code with BEM formatting
+              li Extensive Div Creation and Formatting
+              li Coming Soon: Building the Right Sidebar
+            .project__modal-container--links
+              button
+                a(href='https://rallanvila.github.io/facebook-clone/' target='_blank')
+                  i#container-i.fas.fa-external-link-alt
+                  | Visit Page
+              button
+                a(href='https://github.com/Rallanvila/facebook-clone' target='_blank')
+                  i#container-i.fab.fa-github("='')
+                  | View Code
+    // =========Footer========
+    footer
+      .footer__details
+        h3 Richard Allan Vila
+        h4
+          | HTML Email Developer
+          br
+          |                 READY FOR HIRE
+      a(href='https://www.linkedin.com/in/allan-vila-91922b129/' target='_blank')
+        i.fab.fa-linkedin
+      a(href='https://github.com/Rallanvila' target='_blank')
+        i.fab.fa-github-square
+    #overlay
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/CSSRulePlugin.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/TextPlugin.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollToPlugin.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js')
+    script(src='./script.js')
+    script(src='/js/dist/vendors~FirstComp.js')
+    script(src='/js/dist/FirstComp.js')
+    script(src='/js/dist/main.js')
