@@ -568,8 +568,15 @@ footer {
 //Media==============================
 @media only screen and (max-width: 750px) {
 	nav{
-		.logo p{
-			display: none;
+		height: 50px;
+		.logo {
+			img{
+				width: 80%;
+			}
+			p{
+				display: none;
+				font-size: .7rem;
+			}
 		}
 		.links a {
 			padding: 0 0 0 10px;
