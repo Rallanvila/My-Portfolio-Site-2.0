@@ -113,11 +113,12 @@ html, body {
 		font-size: 3rem;
 	}
 	h2{
-		font-size: 2rem;
-		padding-bottom: 40px;
+		font-size: 1.7rem;
+		font-weight: 300;
+		padding-bottom: 30px;
 	}
 	h3{
-		font-size: 1.5rem;
+		font-size: 1.4rem;
 		padding-bottom: 30px;
 	}
 	a, button{
@@ -204,9 +205,8 @@ header{
 	max-width: $max-width;
 	text-align: center;
 	h2{
-		font-size: 2rem;
 		font-weight: bold;
-		padding: 40px 0;
+		padding: 20px 0;
 	}
 	.about__profile-pic{
 		padding-bottom: 40px;
@@ -265,9 +265,6 @@ header{
 		margin-bottom: 30px;
 		padding-top: 40px;
 	}
-	h3{
-		font-size: 1.5rem
-	}
 	.what-i-do__container{
 		max-width: $max-width-wide;
 		@include push--auto;
@@ -275,7 +272,7 @@ header{
 		.what-i-do__container--sections-container{
 			max-width: 300px;
 			h3{
-				padding: 30px;
+				padding: 15px 0 10px;
 			}
 			p{
 				padding-bottom: 40px;
@@ -289,7 +286,7 @@ header{
 	@include push--auto;
 	display:flex;
 	max-width: $max-width;
-	margin-top: 50px;
+	margin: 50px auto;
 	h2{
 		padding-bottom: 30px;
 	}
@@ -368,9 +365,9 @@ header{
 		z-index: 5;
 
 		h2{
-			font-size: 2rem;
 			color: $white;
-			padding-bottom: 40px;
+			font-size: 2rem;
+			padding-bottom: 30px;
 			z-index: 5;
 		}
 	}
