@@ -6,7 +6,7 @@ $color-font: #1C1C1C;
 $color-bg: #F0F0F0;
 $color-btn: #EFEFEF;
 $black: #0a0a0a;
-$white: #fefefee9;
+$white: #fefefef9;
 $font-family-poppins: "Poppins", sans-serif;
 $font-family-zilla: "Zilla Slab", serif;
 
@@ -61,7 +61,7 @@ $global-btn-border-radius: 25px;
 			background-color: darken($color-bg, 5%)
 		}
 		a{
-			color: black;
+			color: $black;
 			text-decoration: none;
 			opacity: .8;
 			transition: all .2s ease-in-out;
