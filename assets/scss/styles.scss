@@ -595,12 +595,17 @@ footer {
 		padding: 0 20px;
 	}
 	.three-values{
-		@include flexContainer(column, center, center)
+		@include flexContainer(column, center, center);
+		min-width: unset;
+		h2{
+			padding-bottom: 0;
+		}
 		.three-values__grid{
-			max-width: 80%;
+			width: 80%;
 			.three-values__grid--val1, .three-values__grid--val2, .three-values__grid--val3{
 				img{ 
 					padding: 10px;
+					width: 99%;
 				}
 			}
 		}
