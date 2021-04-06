@@ -492,7 +492,7 @@ header{
 		@include flexContainer(column, center, center);
 		@include button-small;
 		width: 90%;
-		margin: 0 15px 15px;
+		margin: 0 auto 20px;
 		background: $white;
 		text-align: justify;
 		img{
