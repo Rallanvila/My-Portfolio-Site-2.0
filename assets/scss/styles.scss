@@ -466,7 +466,8 @@ header{
 	margin: auto;
 	width: 50vw;
 	min-width: 350px;
-	height: 80vh;
+	max-height: 80vh;
+	overflow: auto;
 	overflow-y: scroll;
 	border-radius: 10px;
 	&.active{
