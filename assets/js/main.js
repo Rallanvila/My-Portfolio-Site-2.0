@@ -247,3 +247,19 @@ window.onclick = function(e) {
 		modal9.style.display = 'none';
 	}
 };
+let modalBtn10 = document.getElementById('lol-btn');
+let modal10 = document.querySelector('.lol-modal');
+let closeBtn10 = document.querySelector('.lol-close-btn');
+modalBtn10.onclick = function() {
+	modal10.style.display = 'block';
+	overlay.classList.add('active');
+};
+closeBtn10.onclick = function() {
+	modal10.style.display = 'none';
+	overlay.classList.remove('active');
+};
+window.onclick = function(e) {
+	if (event.target == modal) {
+		modal10.style.display = 'none';
+	}
+};
