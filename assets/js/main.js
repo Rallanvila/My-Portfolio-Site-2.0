@@ -263,3 +263,19 @@ window.onclick = function(e) {
 		modal10.style.display = 'none';
 	}
 };
+let modalBtn11 = document.getElementById('verizon-btn');
+let modal11 = document.querySelector('.verizon-modal');
+let closeBtn11 = document.querySelector('.verizon-close-btn');
+modalBtn11.onclick = function() {
+	modal11.style.display = 'block';
+	overlay.classList.add('active');
+};
+closeBtn11.onclick = function() {
+	modal11.style.display = 'none';
+	overlay.classList.remove('active');
+};
+window.onclick = function(e) {
+	if (event.target == modal) {
+		modal11.style.display = 'none';
+	}
+};
