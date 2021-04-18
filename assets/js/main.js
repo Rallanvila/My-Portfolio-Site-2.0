@@ -24,7 +24,7 @@ gsap.from('.main-banner__headline--contact-btn', {
 	ease: 'back'
 });
 
-gsap.from('.nav', {
+gsap.from('nav', {
 	duration: 6,
 	opacity: 0
 });
@@ -45,17 +45,6 @@ gsap.from('.what-i-do', {
 		marker: true
 	},
 	duration: 1,
-	opacity: 0,
-	stagger: 0.2,
-	x: -15
-});
-
-gsap.from('.competencies', {
-	scrollTrigger: {
-		trigger: '.competencies',
-		start: 'top center'
-	},
-	duration: 2,
 	opacity: 0,
 	stagger: 0.2,
 	x: -15
@@ -294,4 +283,18 @@ window.onclick = function(e) {
 	if (event.target == modal) {
 		modal12.style.display = 'none';
 	}
+};
+//Email Capture========================
+window.onload = function() {
+	let emailSate = false;
+	let emailModal = document.getElementsByClassName('email-modal')[0];
+	let emailCloseBtn = document.getElementsByClassName(
+		'email-modal__close-btn'
+	)[0];
+	let emailInput = document.getElementsByClassName(
+		'email-modal__form-group--email'
+	)[0];
+	let emailSubmit = doucment.getElementsByClassName(
+		'email-modal__form-group--submit'
+	);
 };
