@@ -24,7 +24,7 @@ $global-btn-border-radius: 25px;
 
 //Mixins===========================================
 @mixin push--auto {
-    margin: { 
+    margin: {
         left: auto;
         right: auto;
     }
@@ -45,7 +45,7 @@ $global-btn-border-radius: 25px;
 	  padding-right: $padding-right + px;
   }
   @mixin projectShadow{
-	-webkit-box-shadow: -6px 6px 8px 0px rgba(0,0,0,0.72); 
+	-webkit-box-shadow: -6px 6px 8px 0px rgba(0,0,0,0.72);
 	box-shadow: -6px 6px 8px 0px rgba(0,0,0,0.72);
   }
   @mixin button{
@@ -150,7 +150,7 @@ nav{
 				color: $white;
 				text-decoration: none;
 				font-family: $font-family-poppins;
-		}	
+		}
 	}
 }
 //Header========================
@@ -228,7 +228,7 @@ header{
 		.three-values__grid--val1{
 			grid-row: 1 / span 1;
 			grid-column: 2 / span 1;
-			
+
 		}
 		.three-values__grid--val2{
 			grid-row: 1 / span 1;
@@ -260,7 +260,7 @@ header{
 	background: $color-bg;
 	margin-top: 50px;
 	text-align: center;
-	
+
 	h2{
 		margin-bottom: 30px;
 		padding-top: 40px;
@@ -361,7 +361,7 @@ header{
 	}
 	.resume__headline{
 		@include flexContainer(column,center, center);
-		@include button; 
+		@include button;
 		z-index: 5;
 
 		h2{
@@ -371,7 +371,7 @@ header{
 			z-index: 5;
 		}
 	}
-	
+
 }
 //My Projects====================
 .my-projects{
@@ -536,12 +536,103 @@ header{
 		pointer-events: all;
 	}
 }
+.overlay-active {
+	position: fixed;
+	top: 0;
+	opacity: 1;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	backdrop-filter: blur(6px);
+	z-index: 40;
+	pointer-events: none;
+}
 .close:hover,
 .close:focus {
 	color: black;
 	text-decoration: none;
 	cursor: pointer;
 }
+// Email Capture====================
+.email-modal, .email-modal--active{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	transition: all .4s ease-in-out;
+	z-index: 100;
+	overflow: hidden;
+    // visibility: hidden;
+    // opacity: 0;
+}
+.email-modal__container, .email-modal__container--active{
+	position: fixed;
+	display: flex;
+	max-width: 50vw;
+	max-height: 60vh;
+	background: white;
+	background: #1D67C8;
+	color: white;
+	.email-modal__info{
+		padding: 20px;
+		.email-modal__logo{
+			display: flex;
+			align-items: center;
+			margin-bottom: 40px;
+			img{
+				padding: 15px 15px 15px 0;
+			}
+		}
+		.email-modal__headline{
+			font-weight: 600;
+			padding-bottom: 10px;
+		}
+		.email-modal__details{
+			padding-bottom: 20px;
+		}
+		.email-modal__form-group{
+			width: 100%;
+			background: white;
+			display: flex;
+			justify-content: space-between;
+			padding: 5px;
+			.email-modal__form-group--email{
+				height: 35px;
+				width: 80%;
+				border: none;
+				padding-left: 10px;
+			}
+			.email-modal__form-group--submit{
+				padding: 5px 25px;
+				color: white;
+				background: green;
+				border: none;
+			}
+		}
+		.decline{
+			padding-top: 20px;
+			text-decoration: underline;
+			opacity: .7;
+		}
+	}
+	.email-modal__side-img{
+		height: 450px;
+		img{
+			justify-content: end;
+			height: 100%;
+			object-position: center;
+			object-fit: cover;
+			object-position: cover;
+		}
+	}
+}
+
 // Footer===========================
 footer {
 	text-align: center;
@@ -603,7 +694,7 @@ footer {
 		.three-values__grid{
 			width: 80%;
 			.three-values__grid--val1, .three-values__grid--val2, .three-values__grid--val3{
-				img{ 
+				img{
 					padding: 10px;
 					width: 99%;
 				}
