@@ -536,18 +536,7 @@ header{
 		pointer-events: all;
 	}
 }
-.overlay-active {
-	position: fixed;
-	top: 0;
-	opacity: 1;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: rgba(0, 0, 0, 0.7);
-	backdrop-filter: blur(6px);
-	z-index: 40;
-	pointer-events: none;
-}
+
 .close:hover,
 .close:focus {
 	color: black;
@@ -555,7 +544,7 @@ header{
 	cursor: pointer;
 }
 // Email Capture====================
-.email-modal, .email-modal--active{
+.email-modal{
     position: fixed;
     top: 0;
     left: 0;
@@ -563,15 +552,22 @@ header{
     height: 100vh;
     background: rgba(0, 0, 0, .7);
     display: flex;
-    justify-content: center;
+	justify-content: center;
+	border-radius: 5px;
     align-items: center;
 	transition: all .4s ease-in-out;
 	z-index: 100;
 	overflow: hidden;
-    // visibility: hidden;
-    // opacity: 0;
+    visibility: hidden;
+	opacity: 0;
+	&.active{
+		visibility: visible;
+		opacity: 1
+
+	}
 }
-.email-modal__container, .email-modal__container--active{
+
+.email-modal__container{
 	position: fixed;
 	display: flex;
 	max-width: 50vw;
@@ -596,12 +592,25 @@ header{
 		.email-modal__details{
 			padding-bottom: 20px;
 		}
+		.email-error{
+			margin-bottom: 5px;
+			color: yellow;
+			display: none;
+			&.active{
+				display: block;
+			}
+			
+		}
 		.email-modal__form-group{
 			width: 100%;
 			background: white;
 			display: flex;
 			justify-content: space-between;
 			padding: 5px;
+			&.active{
+				border: 2px solid red;
+			}
+			
 			.email-modal__form-group--email{
 				height: 35px;
 				width: 80%;
@@ -619,6 +628,7 @@ header{
 			padding-top: 20px;
 			text-decoration: underline;
 			opacity: .7;
+			cursor: pointer;
 		}
 	}
 	.email-modal__side-img{

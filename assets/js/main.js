@@ -286,15 +286,49 @@ window.onclick = function(e) {
 };
 //Email Capture========================
 window.onload = function() {
-	let emailSate = false;
+	//VARIABLES=====
+	let emailState = false;
 	let emailModal = document.getElementsByClassName('email-modal')[0];
+	let overlay = document.getElementsByClassName('overlay')[0];
 	let emailCloseBtn = document.getElementsByClassName(
 		'email-modal__close-btn'
 	)[0];
 	let emailInput = document.getElementsByClassName(
 		'email-modal__form-group--email'
 	)[0];
-	let emailSubmit = doucment.getElementsByClassName(
+	let emailSubmit = document.getElementsByClassName(
 		'email-modal__form-group--submit'
-	);
+	)[0];
+	let decline = document.getElementsByClassName('decline')[0];
+	//FUCTIONS=====
+	let emailIsValid = email => {
+		return /\S+@\S+\.\S+/.test(email);
+	};
+	let showModal = () => {
+		document.body.addEventListener('mouseleave', () => {
+			if (emailState == false) {
+				emailModal.classList.add('active');
+				overlay.classList.add('active');
+				emailState = true;
+			}
+		});
+	};
+	let closeModal = () => {
+		emailModal.classList.remove('active');
+		overlay.classList.remove('active');
+	};
+	//EVENT LISTENERS====
+	decline.addEventListener('click', () => {
+		closeModal();
+	});
+
+	showModal();
+
+	emailSubmit.addEventListener('click', () => {
+		if (emailIsValid(emailInput.value)) {
+			console.log('valid');
+		} else {
+			console.log('not valid');
+		}
+	});
 };
