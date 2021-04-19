@@ -578,6 +578,7 @@ header{
 	overflow: hidden;
 	.email-modal__info{
 		padding: 20px;
+		width: 70%;
 		.email-modal__logo{
 			display: flex;
 			align-items: center;
@@ -633,14 +634,14 @@ header{
 		}
 	}
 	.email-modal__side-img{
-		height: 466px;
-		img{
-			justify-content: end;
-			height: 100%;
-			object-position: center;
-			object-fit: cover;
-			object-position: cover;
-		}
+		// height: 466px;
+		// img{
+		// 	justify-content: end;
+		// 	height: 100%;
+		// 	object-position: center;
+		// 	object-fit: cover;
+		// 	object-position: cover;
+		// }
 	}
 	.thank-you{
 		z-index: 100;
