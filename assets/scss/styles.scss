@@ -575,6 +575,7 @@ header{
 	background: white;
 	background: #1D67C8;
 	color: white;
+	overflow: hidden;
 	.email-modal__info{
 		padding: 20px;
 		.email-modal__logo{
@@ -599,7 +600,7 @@ header{
 			&.active{
 				display: block;
 			}
-			
+
 		}
 		.email-modal__form-group{
 			width: 100%;
@@ -610,7 +611,7 @@ header{
 			&.active{
 				border: 2px solid red;
 			}
-			
+
 			.email-modal__form-group--email{
 				height: 35px;
 				width: 80%;
@@ -632,7 +633,7 @@ header{
 		}
 	}
 	.email-modal__side-img{
-		height: 450px;
+		height: 466px;
 		img{
 			justify-content: end;
 			height: 100%;
@@ -640,6 +641,32 @@ header{
 			object-fit: cover;
 			object-position: cover;
 		}
+	}
+	.thank-you{
+		z-index: 100;
+		position: absolute;
+		background: #1D67C8;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		transform: translate3d(100%, 0, 0);
+		transition: all .6s ease-in-out;
+		@include flexContainer(column, center, center)
+		h1{
+			color: white;
+			font-size: 3rem;
+			padding-bottom: 20px;
+			font-weight: 600;
+		}
+		p{
+			font-size: 1.5rem;
+			color: white;
+		}
+		&.active{
+			transform: translate3d(0, 0, 0);
+		}
+
 	}
 }
 

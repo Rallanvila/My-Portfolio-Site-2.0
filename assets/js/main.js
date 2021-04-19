@@ -293,12 +293,17 @@ window.onload = function() {
 	let emailCloseBtn = document.getElementsByClassName(
 		'email-modal__close-btn'
 	)[0];
+	let emailError = document.getElementsByClassName('email-error')[0];
+	let emailFormGroup = document.getElementsByClassName(
+		'email-modal__form-group'
+	)[0];
 	let emailInput = document.getElementsByClassName(
 		'email-modal__form-group--email'
 	)[0];
 	let emailSubmit = document.getElementsByClassName(
 		'email-modal__form-group--submit'
 	)[0];
+	let showThankYou = document.getElementsByClassName('thank-you')[0];
 	let decline = document.getElementsByClassName('decline')[0];
 	//FUCTIONS=====
 	let emailIsValid = email => {
@@ -317,18 +322,35 @@ window.onload = function() {
 		emailModal.classList.remove('active');
 		overlay.classList.remove('active');
 	};
+	let removeErrors = () => {
+		emailError.classList.remove('active');
+		emailFormGroup.classList.remove('active');
+	};
+	let errors = () => {
+		emailError.classList.add('active');
+		emailFormGroup.classList.add('active');
+	};
+	let success = () => {
+		showThankYou.classList.add('active');
+		setTimeout(() => {
+			closeModal();
+		}, 3000);
+	};
 	//EVENT LISTENERS====
 	decline.addEventListener('click', () => {
 		closeModal();
+	});
+	emailInput.addEventListener('click', () => {
+		removeErrors();
 	});
 
 	showModal();
 
 	emailSubmit.addEventListener('click', () => {
 		if (emailIsValid(emailInput.value)) {
-			console.log('valid');
+			success();
 		} else {
-			console.log('not valid');
+			errors();
 		}
 	});
 };
