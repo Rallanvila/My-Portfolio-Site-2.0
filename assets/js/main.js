@@ -25,7 +25,7 @@ gsap.from('.main-banner__headline--contact-btn', {
 });
 
 gsap.from('nav', {
-	duration: 6,
+	duration: 3,
 	opacity: 0
 });
 

@@ -1,0 +1,153 @@
+//My Projects====================
+.my-projects{
+	text-align: center;
+	margin-bottom: 100px;
+	h2{
+		padding-bottom: 10px;
+	}
+	.my-projects-filter{
+		@include flexContainer(row, space-evenly, center);
+		@include push--auto;
+		margin-top: 40px;
+		max-width: $max-width;
+		@include button;
+	}
+	.my-projects__project-container{
+		@include flexContainer(row, space-around, flex-start);
+		@include push--auto;
+		flex-wrap: wrap;
+		max-width: $max-width-wide;
+
+		.my-projects__project-container--project{
+			width: 400px;
+			height: 250px;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			text-align: center;
+			margin-top: 35px;
+			transition: 0.6s ease-out;
+			&::before{
+				content:"";
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: block;
+				width: 100%;
+				height: 100%;
+				background: linear-gradient(to top, $black, transparent);
+				z-index: 2;
+				transition: .5s;
+				opacity: 0;
+			}
+			& .project-text{
+				position: relative;
+				z-index: 3;
+				color: $white;
+				opacity: 0;
+			}
+			&:hover .project-text{
+				opacity: 1;
+				transform: translateY(150px);
+				transition: 1s ease-in-out;
+			}
+			&:hover{
+				transform: scale(1.025);
+			}
+			&:hover::before{
+				opacity: 1;
+			}
+			img{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				object-fit: cover;
+				border-radius: $global-border-radius;
+				@include projectShadow;
+			}
+			.project-text{
+				@include button-small;
+				h5{
+					font-size: 1.3rem;
+					padding-bottom: 10px;
+					justify-self: center;
+				}
+			}
+		}
+	}
+}
+.project__modal-container{
+	@include flexContainer(column, center, center);
+	@include push--auto;
+	display: none;
+	text-align: center;
+	background-color: $color-bg;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transition: all 1s ease-in-out;
+	transform: translate(-50%, -50%);
+	z-index: 50;
+	margin: auto;
+	width: 50vw;
+	min-width: 350px;
+	max-height: 80vh;
+	overflow: auto;
+	overflow-y: scroll;
+	border-radius: 10px;
+	&.active{
+		animation: openit 1s ease-in-out;
+		width: 50vw;
+  		height: 80vh;
+	}
+	h2{
+		padding: 10px 0 0;
+	}
+	h3{
+		padding-bottom: 10px;
+	}
+	.close-btn, .hbo-close-btn, .dribbble-close-btn, .bayside-close-btn, .target-close-btn, .kayak-close-btn, .kim-close-btn, .sushi-close-btn, .medical-close-btn, .fb-close-btn, .lol-close-btn, .verizon-close-btn, .parkmobile-close-btn{
+		position: absolute;
+		font-size: 30px;
+		top: 10px;
+		right: 20px;
+		cursor: pointer;
+	}
+	.project__modal-container--content{
+		@include flexContainer(column, center, center);
+		@include button-small;
+		width: 90%;
+		margin: 0 auto 20px;
+		background: $white;
+		text-align: justify;
+		img{
+			width:100%;
+		}
+		p{
+			padding: 30px;
+			font-family: $font-family-poppins;
+		}
+		li{
+			text-align: center;
+			padding-bottom: 5px;
+		}
+		.project__modal-container--links{
+			i, a{
+				font-size: 1rem;
+				color: $black;
+			}
+			i{
+				padding-right: 10px;
+			}
+			button{
+				margin: 20px 10px;
+			}
+		}
+	}
+}
+.close:hover,
+.close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}

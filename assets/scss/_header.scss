@@ -1,0 +1,73 @@
+//Nav Bar=======================
+nav{
+	@include flexContainer(row, space-between, center);
+	width: 100%;
+	height: 80px;
+	background: $black;
+	position: fixed;
+	padding: 0 20px;
+	z-index: 70;
+	.logo{
+		@include flexContainer(row, center, center);
+		color: $white;
+		p{
+			font-family: "Poppins", sans-serif;
+			margin-left: 20px;
+		}
+	}
+	.links {
+			@include flexContainer(row, center, center)
+			a {
+				@include flexContainer(row, center, center);
+				@include paddingLR(20, 20);
+				color: $white;
+				text-decoration: none;
+				font-family: $font-family-poppins;
+		}
+	}
+}
+//Header========================
+header{
+	@include flexContainer(column, center, center);
+	width: 100%;
+	height: 800px;
+	padding: 80px 0;
+	background-image: url(../img/Banner-Hires.jpg);
+	position: relative;
+	background-size: cover;
+	background-position: bottom center;
+	.main-banner__overlay {
+	width: 100%;
+	height: 800px;
+	background: #000000;
+	opacity: .4;
+	position: absolute;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	pointer-events: none;
+}
+	.main-banner__headline{
+		@include button;
+		position: relative;
+		z-index: 20;
+		// top: 40%;
+		// left: 20%;
+		// transform: -50% -50%;
+		h1{
+			font-size: 4rem;
+			color: $white;
+		}
+		span{
+			font-size: 2rem;
+			color: $white;
+			font-family: $font-family-poppins;
+		}
+		button{
+			position: absolute;
+			bottom: -70px;
+			right: 0;
+		}
+
+	}
+}
