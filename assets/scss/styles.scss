@@ -202,7 +202,6 @@
 
 	}
 }
-
 .email-modal__container{
 	position: fixed;
 	display: flex;
@@ -214,7 +213,7 @@
 	overflow: hidden;
 	.email-modal__info{
 		padding: 20px;
-		width: 70%;
+		width: 60%;
 		.email-modal__logo{
 			display: flex;
 			align-items: center;
@@ -234,8 +233,11 @@
 			margin-bottom: 5px;
 			color: yellow;
 			display: none;
+			transition: all .3s ease-in-out;
+			opacity: 0;
 			&.active{
 				display: block;
+				opacity: 1;
 			}
 
 		}
@@ -270,14 +272,10 @@
 		}
 	}
 	.email-modal__side-img{
-		// height: 466px;
-		// img{
-		// 	justify-content: end;
-		// 	height: 100%;
-		// 	object-position: center;
-		// 	object-fit: cover;
-		// 	object-position: cover;
-		// }
+		background: url('../img/stop.jpg');
+		background-position: bottom;
+		background-size: cover;
+		width: 40%;
 	}
 	.thank-you{
 		z-index: 100;
@@ -306,7 +304,6 @@
 
 	}
 }
-
 // Footer===========================
 footer {
 	text-align: center;
@@ -343,7 +340,7 @@ footer {
 	z-index: 40;
 	pointer-events: none;
 	&.active{
-		opacity: 1;
+		opacity: 0.7;
 		pointer-events: all;
 	}
 }
