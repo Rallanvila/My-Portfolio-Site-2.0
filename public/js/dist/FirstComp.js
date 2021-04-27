@@ -1,41 +1,5 @@
 (function(modules) {
-    function webpackJsonpCallback(data) {
-        var chunkIds = data[0];
-        var moreModules = data[1];
-        var executeModules = data[2];
-        var moduleId, chunkId, i = 0, resolves = [];
-        for (;i < chunkIds.length; i++) {
-            chunkId = chunkIds[i];
-            if (Object.prototype.hasOwnProperty.call(installedChunks, chunkId) && installedChunks[chunkId]) resolves.push(installedChunks[chunkId][0]);
-            installedChunks[chunkId] = 0;
-        }
-        for (moduleId in moreModules) if (Object.prototype.hasOwnProperty.call(moreModules, moduleId)) modules[moduleId] = moreModules[moduleId];
-        if (parentJsonpFunction) parentJsonpFunction(data);
-        while (resolves.length) resolves.shift()();
-        deferredModules.push.apply(deferredModules, executeModules || []);
-        return checkDeferredModules();
-    }
-    function checkDeferredModules() {
-        var result;
-        for (var i = 0; i < deferredModules.length; i++) {
-            var deferredModule = deferredModules[i];
-            var fulfilled = true;
-            for (var j = 1; j < deferredModule.length; j++) {
-                var depId = deferredModule[j];
-                if (0 !== installedChunks[depId]) fulfilled = false;
-            }
-            if (fulfilled) {
-                deferredModules.splice(i--, 1);
-                result = __webpack_require__(__webpack_require__.s = deferredModule[0]);
-            }
-        }
-        return result;
-    }
     var installedModules = {};
-    var installedChunks = {
-        FirstComp: 0
-    };
-    var deferredModules = [];
     function __webpack_require__(moduleId) {
         if (installedModules[moduleId]) return installedModules[moduleId].exports;
         var module = installedModules[moduleId] = {
@@ -91,17 +55,9 @@
         return Object.prototype.hasOwnProperty.call(object, property);
     };
     __webpack_require__.p = "";
-    var jsonpArray = window["webpackJsonp"] = window["webpackJsonp"] || [];
-    var oldJsonpFunction = jsonpArray.push.bind(jsonpArray);
-    jsonpArray.push = webpackJsonpCallback;
-    jsonpArray = jsonpArray.slice();
-    for (var i = 0; i < jsonpArray.length; i++) webpackJsonpCallback(jsonpArray[i]);
-    var parentJsonpFunction = oldJsonpFunction;
-    deferredModules.push([ "./assets/js/components/FirstComp.js", "vendors~FirstComp" ]);
-    return checkDeferredModules();
+    return __webpack_require__(__webpack_require__.s = "./assets/js/components/FirstComp.js");
 })({
-    "./assets/js/components/FirstComp.js": function(module, __webpack_exports__, __webpack_require__) {
-        "use strict";
-        eval('__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);\nfunction asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }\n\nfunction _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }\n\n\n\n\nclass Layout extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {\n  constructor() {\n    super();\n\n    this.clickedBtn = () => {};\n\n    this.state = {\n      name: \'Joe\'\n    };\n  }\n\n  test() {\n    return _asyncToGenerator(function* () {})();\n  }\n\n  render() {\n    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {\n      className: "home"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {\n      className: "Aligner"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {\n      className: "Aligner-item"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {\n      src: "/img/logo.png",\n      alt: "codingphase logo"\n    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Dev-Starter-Kit"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {\n      className: "menu"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {\n      href: "http://starterkit.codingphase.com",\n      target: "new"\n    }, "Documentation")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {\n      href: "http://www.codingphase.com",\n      target: "new"\n    }, "CodingPhase.Com")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {\n      className: "version-num"\n    }, "version 4.0.0"))));\n  }\n\n}\n\nconst app = document.getElementById(\'app\');\nreact_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Layout, null), app);\n\n//# sourceURL=webpack:///./assets/js/components/FirstComp.js?');
+    "./assets/js/components/FirstComp.js": function(module, exports) {
+        eval('// import React, { Component } from \'react\';\n// import ReactDOM from \'react-dom\';\n// class Layout extends Component {\n// \tconstructor() {\n// \t\tsuper();\n// \t\tthis.state = {\n// \t\t\tname: \'Joe\'\n// \t\t};\n// \t}\n// \tclickedBtn = () => {};\n// \tasync test() {}\n// \trender() {\n// \t\treturn (\n// \t\t\t<div className="home">\n// \t\t\t\t<div className="Aligner">\n// \t\t\t\t\t<div className="Aligner-item">\n// \t\t\t\t\t\t<img src="/img/logo.png" alt="codingphase logo" />\n// \t\t\t\t\t\t<h1>Dev-Starter-Kit</h1>\n// \t\t\t\t\t\t<div className="menu">\n// \t\t\t\t\t\t\t<ul>\n// \t\t\t\t\t\t\t\t<li>\n// \t\t\t\t\t\t\t\t\t<a href="http://starterkit.codingphase.com" target="new">\n// \t\t\t\t\t\t\t\t\t\tDocumentation\n// \t\t\t\t\t\t\t\t\t</a>\n// \t\t\t\t\t\t\t\t</li>\n// \t\t\t\t\t\t\t\t<li>\n// \t\t\t\t\t\t\t\t\t<a href="http://www.codingphase.com" target="new">\n// \t\t\t\t\t\t\t\t\t\tCodingPhase.Com\n// \t\t\t\t\t\t\t\t\t</a>\n// \t\t\t\t\t\t\t\t</li>\n// \t\t\t\t\t\t\t</ul>\n// \t\t\t\t\t\t</div>\n// \t\t\t\t\t\t<div className="version-num">version 4.0.0</div>\n// \t\t\t\t\t</div>\n// \t\t\t\t</div>\n// \t\t\t</div>\n// \t\t);\n// \t}\n// }\n// const app = document.getElementById(\'app\');\n// ReactDOM.render(<Layout />, app);\n\n//# sourceURL=webpack:///./assets/js/components/FirstComp.js?');
     }
 });

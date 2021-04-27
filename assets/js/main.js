@@ -101,11 +101,11 @@ closeBtn1.onclick = function() {
 	modal1.style.display = 'none';
 	overlay.classList.remove('active');
 };
-window.onclick = function() {
-	if (event.target == modal) {
-		modal1.style.display = 'none';
-	}
-};
+// window.onclick = function() {
+// 	if (event.target == modal) {
+// 		modal1.style.display = 'none';
+// 	}
+// };
 let modalBtn2 = document.getElementById('dribbble-btn');
 let modal2 = document.querySelector('.dribbble-modal');
 let closeBtn2 = document.querySelector('.dribbble-close-btn');
@@ -117,11 +117,11 @@ closeBtn2.onclick = function() {
 	modal2.style.display = 'none';
 	overlay.classList.remove('active');
 };
-window.onclick = function() {
-	if (event.target == modal) {
-		modal2.style.display = 'none';
-	}
-};
+// window.onclick = function() {
+// 	if (event.target == modal) {
+// 		modal2.style.display = 'none';
+// 	}
+// };
 let modalBtn3 = document.getElementById('bayside-btn');
 let modal3 = document.querySelector('.bayside-modal');
 let closeBtn3 = document.querySelector('.bayside-close-btn');
@@ -133,11 +133,11 @@ closeBtn3.onclick = function() {
 	modal3.style.display = 'none';
 	overlay.classList.remove('active');
 };
-window.onclick = function() {
-	if (event.target == modal) {
-		modal3.style.display = 'none';
-	}
-};
+// window.onclick = function() {
+// 	if (event.target == modal) {
+// 		modal3.style.display = 'none';
+// 	}
+// };
 let modalBtn4 = document.getElementById('target-btn');
 let modal4 = document.querySelector('.target-modal');
 let closeBtn4 = document.querySelector('.target-close-btn');
@@ -149,11 +149,11 @@ closeBtn4.onclick = function() {
 	modal4.style.display = 'none';
 	overlay.classList.remove('active');
 };
-window.onclick = function() {
-	if (event.target == modal) {
-		modal4.style.display = 'none';
-	}
-};
+// window.onclick = function() {
+// 	if (event.target == modal) {
+// 		modal4.style.display = 'none';
+// 	}
+// };
 let modalBtn5 = document.getElementById('kayak-btn');
 let modal5 = document.querySelector('.kayak-modal');
 let closeBtn5 = document.querySelector('.kayak-close-btn');
@@ -165,11 +165,11 @@ closeBtn5.onclick = function() {
 	modal5.style.display = 'none';
 	overlay.classList.remove('active');
 };
-window.onclick = function() {
-	if (event.target == modal) {
-		modal5.style.display = 'none';
-	}
-};
+// window.onclick = function() {
+// 	if (event.target == modal) {
+// 		modal5.style.display = 'none';
+// 	}
+// };
 let modalBtn6 = document.getElementById('kim-btn');
 let modal6 = document.querySelector('.kim-modal');
 let closeBtn6 = document.querySelector('.close-btn');
@@ -181,12 +181,11 @@ closeBtn6.onclick = function() {
 	modal6.style.display = 'none';
 	overlay.classList.remove('active');
 };
-window.onclick = function() {
-	if (event.target == modal) {
-		modal6.style.display = 'none';
-	}
-};
-
+// window.onclick = function() {
+// 	if (event.target == modal) {
+// 		modal6.style.display = 'none';
+// 	}
+// };
 let modalBtn7 = document.getElementById('sushi-btn');
 let modal7 = document.querySelector('.sushi-modal');
 let closeBtn7 = document.querySelector('.sushi-close-btn');
@@ -198,12 +197,11 @@ closeBtn7.onclick = function() {
 	modal7.style.display = 'none';
 	overlay.classList.remove('active');
 };
-window.onclick = function(e) {
-	if (event.target == modal) {
-		modal7.style.display = 'none';
-	}
-};
-
+// window.onclick = function(e) {
+// 	if (event.target == modal) {
+// 		modal7.style.display = 'none';
+// 	}
+// };
 let modalBtn8 = document.getElementById('medical-btn');
 let modal8 = document.querySelector('.medical-modal');
 let closeBtn8 = document.querySelector('.medical-close-btn');
@@ -215,11 +213,11 @@ closeBtn8.onclick = function() {
 	modal8.style.display = 'none';
 	overlay.classList.remove('active');
 };
-window.onclick = function(e) {
-	if (event.target == modal) {
-		modal8.style.display = 'none';
-	}
-};
+// window.onclick = function(e) {
+// 	if (event.target == modal) {
+// 		modal8.style.display = 'none';
+// 	}
+// };
 let modalBtn9 = document.getElementById('fb-btn');
 let modal9 = document.querySelector('.fb-modal');
 let closeBtn9 = document.querySelector('.fb-close-btn');
@@ -231,11 +229,11 @@ closeBtn9.onclick = function() {
 	modal9.style.display = 'none';
 	overlay.classList.remove('active');
 };
-window.onclick = function(e) {
-	if (event.target == modal) {
-		modal9.style.display = 'none';
-	}
-};
+// window.onclick = function(e) {
+// 	if (event.target == modal) {
+// 		modal9.style.display = 'none';
+// 	}
+// };
 let modalBtn10 = document.getElementById('lol-btn');
 let modal10 = document.querySelector('.lol-modal');
 let closeBtn10 = document.querySelector('.lol-close-btn');
@@ -247,11 +245,11 @@ closeBtn10.onclick = function() {
 	modal10.style.display = 'none';
 	overlay.classList.remove('active');
 };
-window.onclick = function(e) {
-	if (event.target == modal) {
-		modal10.style.display = 'none';
-	}
-};
+// window.onclick = function(e) {
+// 	if (event.target == modal) {
+// 		modal10.style.display = 'none';
+// 	}
+// };
 let modalBtn11 = document.getElementById('verizon-btn');
 let modal11 = document.querySelector('.verizon-modal');
 let closeBtn11 = document.querySelector('.verizon-close-btn');
@@ -263,11 +261,11 @@ closeBtn11.onclick = function() {
 	modal11.style.display = 'none';
 	overlay.classList.remove('active');
 };
-window.onclick = function(e) {
-	if (event.target == modal) {
-		modal11.style.display = 'none';
-	}
-};
+// window.onclick = function(e) {
+// 	if (event.target == modal) {
+// 		modal11.style.display = 'none';
+// 	}
+// };
 let modalBtn12 = document.getElementById('parkmobile-btn');
 let modal12 = document.querySelector('.parkmobile-modal');
 let closeBtn12 = document.querySelector('.parkmobile-close-btn');
@@ -279,11 +277,11 @@ closeBtn12.onclick = function() {
 	modal12.style.display = 'none';
 	overlay.classList.remove('active');
 };
-window.onclick = function(e) {
-	if (event.target == modal) {
-		modal12.style.display = 'none';
-	}
-};
+// window.onclick = function(e) {
+// 	if (event.target == modal) {
+// 		modal12.style.display = 'none';
+// 	}
+// };
 //Email Capture========================
 window.onload = function() {
 	//VARIABLES=====
