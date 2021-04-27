@@ -303,7 +303,7 @@ window.onload = function() {
 	)[0];
 	let showThankYou = document.getElementsByClassName('thank-you')[0];
 	let decline = document.getElementsByClassName('decline')[0];
-	//FUCTIONS=====
+	//FUNCTIONS=====
 	let emailIsValid = email => {
 		return /\S+@\S+\.\S+/.test(email);
 	};
