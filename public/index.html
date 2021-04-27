@@ -609,8 +609,8 @@
                         <div class="email-error"><p>Sorry, please enter a valid email address</p></div>
                         <form name="email-capture" method="POST" data-netlify="true" class="email-modal__form-group">
                             <label for="email-capture"></label>
-                            <input id="email-capture" name="email-capture" class="email-modal__form-group--email" type="email" placeholder="youremail@email.com">
-                            <input type='submit' value='Send' class="email-modal__form-group--submit"></input>
+                            <input id="email-capture" name="email" class="email-modal__form-group--email" type="email" placeholder="youremail@email.com">
+                            <input type='submit' value='Send' class="email-modal__form-group--submit" onclick="ValidateEmail(document.email-capture.email)"></input>
                         </form>
                         <div class="decline">
                             Sorry, I'm not interested

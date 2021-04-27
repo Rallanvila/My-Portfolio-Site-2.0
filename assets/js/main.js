@@ -352,3 +352,7 @@ window.onload = function() {
 		}
 	});
 };
+function ValidateEmail(event, inputText) {
+	event.preventDefault();
+	//remaining function logic goes here
+}
