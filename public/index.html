@@ -608,8 +608,9 @@
                         <p class="email-modal__details">Grow your business by growing your mailing list. That'll help you stay top of mind and grow your brand! Do you have an alert to get your customer's attention as they're about to leave your page? <br><br>Enter your email to hire a motivated, self-starting developer. I can replicate any design and learn anything needed to get the job done!!
                         <div class="email-error"><p>Sorry, please enter a valid email address</p></div>
                         <form name="email-capture" method="POST" data-netlify="true" class="email-modal__form-group">
-                            <label for="email-capture"></label><input id="email-capture" class="email-modal__form-group--email" type="email" placeholder="youremail@email.com">
-                            <button class="email-modal__form-group--submit">Send</button>
+                            <label for="email-capture"></label>
+                            <input id="email-capture" name="email-capture" class="email-modal__form-group--email" type="email" placeholder="youremail@email.com">
+                            <input type='submit' value='Send' class="email-modal__form-group--submit"></input>
                         </form>
                         <div class="decline">
                             Sorry, I'm not interested
