@@ -273,6 +273,22 @@ closeBtn12.onclick = function() {
 // 		modal12.style.display = 'none';
 // 	}
 // };
+let modalBtn13 = document.getElementById('auto-btn');
+let modal13 = document.querySelector('.auto-modal');
+let closeBtn13 = document.querySelector('.auto-close-btn');
+modalBtn13.onclick = function() {
+	modal13.style.display = 'block';
+	overlay.classList.add('active');
+};
+closeBtn13.onclick = function() {
+	modal13.style.display = 'none';
+	overlay.classList.remove('active');
+};
+// window.onclick = function(e) {
+// 	if (event.target == modal) {
+// 		modal12.style.display = 'none';
+// 	}
+// };
 //Email Capture========================
 window.onload = function() {
 	//VARIABLES=====
