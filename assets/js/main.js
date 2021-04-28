@@ -289,6 +289,22 @@ closeBtn13.onclick = function() {
 // 		modal12.style.display = 'none';
 // 	}
 // };
+let modalBtn14 = document.getElementById('mtg-btn');
+let modal14 = document.querySelector('.mtg-modal');
+let closeBtn14 = document.querySelector('.mtg-close-btn');
+modalBtn14.onclick = function() {
+	modal14.style.display = 'block';
+	overlay.classList.add('active');
+};
+closeBtn14.onclick = function() {
+	modal14.style.display = 'none';
+	overlay.classList.remove('active');
+};
+// window.onclick = function(e) {
+// 	if (event.target == modal) {
+// 		modal12.style.display = 'none';
+// 	}
+// };
 //Email Capture========================
 window.onload = function() {
 	//VARIABLES=====
