@@ -337,6 +337,38 @@ closeBtn16.onclick = function() {
 // 		modal12.stsplashyle.display = 'none';
 // 	}
 // };
+let modalBtn17 = document.getElementById('mtg-btn');
+let modal17 = document.querySelector('.mtg-modal');
+let closeBtn17 = document.querySelector('.mtg-close-btn');
+modalBtn17.onclick = function() {
+	modal17.style.display = 'block';
+	overlay.classList.add('active');
+};
+closeBtn17.onclick = function() {
+	modal17.style.display = 'none';
+	overlay.classList.remove('active');
+};
+// window.onclick = function(e) {
+// 	if (event.target == modal) {
+// 		modal12.stsplashyle.display = 'none';
+// 	}
+// };
+let modalBtn18 = document.getElementById('realEstate-btn');
+let modal18 = document.querySelector('.realEstate-modal');
+let closeBtn18 = document.querySelector('.realEstate-close-btn');
+modalBtn18.onclick = function() {
+	modal18.style.display = 'block';
+	overlay.classList.add('active');
+};
+closeBtn18.onclick = function() {
+	modal18.style.display = 'none';
+	overlay.classList.remove('active');
+};
+// window.onclick = function(e) {
+// 	if (event.target == modal) {
+// 		modal12.stsplashyle.display = 'none';
+// 	}
+// };
 //Email Capture========================
 window.onload = function() {
 	//VARIABLES=====
