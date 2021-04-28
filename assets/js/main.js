@@ -321,6 +321,22 @@ closeBtn15.onclick = function() {
 // 		modal12.stsplashyle.display = 'none';
 // 	}
 // };
+let modalBtn16 = document.getElementById('gsap-btn');
+let modal16 = document.querySelector('.gsap-modal');
+let closeBtn16 = document.querySelector('.gsap-close-btn');
+modalBtn16.onclick = function() {
+	modal16.style.display = 'block';
+	overlay.classList.add('active');
+};
+closeBtn16.onclick = function() {
+	modal16.style.display = 'none';
+	overlay.classList.remove('active');
+};
+// window.onclick = function(e) {
+// 	if (event.target == modal) {
+// 		modal12.stsplashyle.display = 'none';
+// 	}
+// };
 //Email Capture========================
 window.onload = function() {
 	//VARIABLES=====
