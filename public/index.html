@@ -154,28 +154,74 @@
         <section id="my-projects" class="my-projects">
                <h2>LOOK AT SOME OF MY WORK</h2>
                <P>(Adding More Monthly)</P>
-               <!-- <div class="my-projects-filter">
-                <div class="my-projects-filter__button">
-                   <button>
-                       <a href="#">HTML Emails</a>
+               <div id="my-projects-filter">
+                   <button class="filter-btn active" onclick="filterSelection('all')">
+                       Show All
+                   </button>
+                   <button class="filter-btn" onclick="filterSelection('email')">
+                       HTML Emails
+                   </button>
+                   <button class="filter-btn" onclick="filterSelection('landing-page')">
+                       Landing Pages
+                   </button>
+                   <button class="filter-btn" onclick="filterSelection('react')">
+                      React
                    </button>
                 </div>
-                <div class="my-projects-filter__button">
-                   <button>
-                       <a href="#">Landing Pages</a>
-                   </button>
-                </div>
-                <div class="my-projects-filter__button">
-                   <button>
-                       <a href="#">In Progress</a>
-                   </button>
-                </div>
-               </div> -->
 <!-- My List of Projects -->
+                <script>
+                    filterSelection('all');
+                    function filterSelection(c) {
+                        var x, i;
+                        x = document.getElementsByClassName('my-projects__project-container--project');
+                        if (c == 'all') c = '';
+                        // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+                        for (i = 0; i < x.length; i++) {
+                            RemoveClass(x[i], 'show');
+                            if (x[i].className.indexOf(c) > -1) AddClass(x[i], 'show');
+                        }
+                    }
+
+                    // Show filtered elements
+                    function AddClass(element, name) {
+                        var i, arr1, arr2;
+                        arr1 = element.className.split(' ');
+                        arr2 = name.split(' ');
+                        for (i = 0; i < arr2.length; i++) {
+                            if (arr1.indexOf(arr2[i]) == -1) {
+                                element.className += ' ' + arr2[i];
+                            }
+                        }
+                    }
+
+                    // Hide elements that are not selected
+                    function RemoveClass(element, name) {
+                        var i, arr1, arr2;
+                        arr1 = element.className.split(' ');
+                        arr2 = name.split(' ');
+                        for (i = 0; i < arr2.length; i++) {
+                            while (arr1.indexOf(arr2[i]) > -1) {
+                                arr1.splice(arr1.indexOf(arr2[i]), 1);
+                            }
+                        }
+                        element.className = arr1.join(' ');
+                    }
+
+                    // Add active class to the current control button (highlight it)
+                    var btnContainer = document.getElementById('my-projects-filter');
+                    var btns = btnContainer.getElementsByClassName('filter-btn');
+                    for (var i = 0; i < btns.length; i++) {
+                        btns[i].addEventListener('click', function() {
+                            var current = document.getElementsByClassName('active');
+                            current[0].className = current[0].className.replace(' active', '');
+                            this.className += ' active';
+                        });
+                    }
+                </script>
             <div class="my-projects__project-container">
                 <!-- HBOMax HTML Email  -->
                 <div id="html-email"
-                class="my-projects__project-container--project">
+                class="my-projects__project-container--project email">
                     <img src="./img/HBOMax Newsletter.png" alt="">
                     <div class="project-text">
                         <h5>HBO Max Newsletter HTML Email</h5>
@@ -207,7 +253,7 @@
                 </div>
                 <!-- Dribbble HTML Email   -->
                 <div id="html-email"
-                class="my-projects__project-container--project">
+                class="my-projects__project-container--project email">
                     <img src="./img/Dribble Newsletter.png" alt="Dribble">
                     <div class="project-text">
                         <h5>Dribbble Newsletter HTML Email</h5>
@@ -242,7 +288,7 @@
                 </div>
                 <!-- Bayside HTML Email     -->
                 <div id="html-email"
-                class="my-projects__project-container--project">
+                class="my-projects__project-container--project email">
                     <img src="./img/Bayside Newsletter.png" alt="">
                     <div class="project-text">
                         <h5>Bayside Newsletter HTML Email</h5>
@@ -275,7 +321,7 @@
                 </div>
                 <!-- Target HTML Email -->
                 <div id="html-email"
-                class="my-projects__project-container--project">
+                class="my-projects__project-container--project email">
                     <img src="./img/Target Transactional.png" alt="Target Email">
                     <div class="project-text">
                         <h5>Target Transactional HTML Email</h5>
@@ -310,7 +356,7 @@
                 </div>
                 <!-- ParkMobile HTML Email -->
                 <div id="html-email"
-                class="my-projects__project-container--project">
+                class="my-projects__project-container--project email">
                     <img src="./img/ParkMobile.png" alt="ParkMobile Email">
                     <div class="project-text">
                         <h5>ParkMobile Transactional HTML Email</h5>
@@ -345,7 +391,7 @@
                 </div>
                 <!-- Verizon HTML Email -->
                 <div id="html-email"
-                class="my-projects__project-container--project">
+                class="my-projects__project-container--project email">
                     <img src="./img/verizon.jpeg" alt="Verizon Email">
                     <div class="project-text">
                         <h5>Verizon Promo HTML Email</h5>
@@ -380,7 +426,7 @@
                 </div>
                 <!-- League HTML Email -->
                 <div id="html-email"
-                class="my-projects__project-container--project">
+                class="my-projects__project-container--project email">
                     <img src="./img/League of Legends.png" alt="League of Legends Project">
                     <div class="project-text">
                         <h5>LOL Promo HTML Email</h5>
@@ -415,12 +461,13 @@
                 </div>
                 <!-- Kayak HTML Email -->
                 <div id="html-email"
-                class="my-projects__project-container--project">
+                class="my-projects__project-container--project email">
                     <img src="./img/Kayak Promo .png" alt="Kayak Project">
                     <div class="project-text">
                         <h5>Kayak Promo HTML Email</h5>
                         <p>
-                        <button id="kayak-btn">          More Info
+                        <button id="kayak-btn">
+                            More Info
                         </button>
                         </p>
                     </div>
@@ -450,7 +497,7 @@
                 </div>
                 <!-- Kimberly Financial Landing Page -->
                 <div id="landing-page"
-                class="my-projects__project-container--project">
+                class="my-projects__project-container--project landing-page">
                 <img src="./img/Kimberly Financial.png" alt="">
                 <div class="project-text">
                     <h5>Kimberly Financial</h5>
@@ -483,7 +530,7 @@
                 </div>
                 <!-- Sushi911 Landing Page -->
                 <div id="landing-page"
-                class="my-projects__project-container--project">
+                class="my-projects__project-container--project landing-page">
                     <img src="./img/911Sushi.png" alt="">
                     <div class="project-text">
                         <h5>911 Sushi</h5>
@@ -519,18 +566,19 @@
                 </div>
                 <!-- Sarasota Med Landing Page  -->
                 <div id="landing-page"
-                class="my-projects__project-container--project">
-                    <img src="./img/Sarasota Medical.png" alt="">
+                class="my-projects__project-container--project landing-page">
+                    <img src="./img/Sarasota Medical.png" alt="Sarasota Med Landing Page">
                     <div class="project-text">
                         <h5>Sarasota Medical</h5>
                         <p>
-                        <button id="medical-btn">          More Info
+                        <button id="medical-btn">
+                            More Info
                         </button>
                         </p>
                     </div>
                 </div>
                 <!-- Sarasota Med Modal -->
-                <div class="medical-modal project__modal-container kim-modal">
+                <div class="medical-modal project__modal-container landing-page">
                     <h2>SARASOTA MEDICAL</h2>
                     <h3>Landing Page</h3>
                     <span class="medical-close-btn" id="medical-close-btn">&times;</span>
@@ -553,8 +601,8 @@
                 </div>
                 <!-- FB Clone Landing Page  -->
                 <div id="landing-page"
-                class="my-projects__project-container--project">
-                    <img src="./img/Facebook Clone.png" alt="">
+                class="my-projects__project-container--project landing-page">
+                    <img src="./img/Facebook Clone.png" alt="Facebook Clone landing page">
                     <div class="project-text">
                         <h5>Facebook Clone</h5>
                         <p>
