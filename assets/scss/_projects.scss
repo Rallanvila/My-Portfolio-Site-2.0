@@ -8,9 +8,14 @@
 	#my-projects-filter{
 		@include flexContainer(row, space-evenly, center);
 		@include push--auto;
+		@include button;
+		padding: 20px;
+		flex-wrap: wrap;
 		margin-top: 40px;
 		max-width: $max-width;
-		@include button;
+		.filter-btn{
+			margin: 10px;
+		}
 		.filter-btn.active{
 			background-color: darken($color-bg, 5%);
 		}

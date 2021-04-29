@@ -439,13 +439,20 @@ footer {
 	.my-projects__project-container--project{
 		width: 300px;
 		height: 250px;
+	}
+	.my-projects{
+		#my-projects-filter {
+		padding: 20px 10px 0;
+		margin-top: 0;
+		.filter-btn{
+			padding: 5px 10px;
+			margin: 10px;
+			&:hover{
+				font-size: 1rem;
+			}
 		}
-	// .medical-modal, .kim-modal, .fb-modal{
-	// 	h2{
-	// 		width: 50%;
-	// 		margin: auto;
-	// 	}
-	// }
+		}
+	}
 }
 
 
