@@ -2,13 +2,14 @@
 
 ### My Portfolio Site 2.0
 
-This is a more up-to-date site. The original "My Portfolio Site" reop was built when i was just starting. This project has a more accurate relfection of my latest skills and technologies to simplify my workflow.
+This is a more up-to-date site. The original "My Portfolio Site" repo was built when I was starting. This project has a more accurate reflection of my latest skills and technologies to simplify my workflow.
 
-I was able to make the website more fluid while reducing the lines of code by nearly half with SIX more projects added in.
+I made the website more fluid while reducing the lines of code by nearly half with EIGHT more projects added.
 
 ## Technologies used
 * HTML
 * CSS
+* Javascript
 * Sass
 * Gulp
 * Babel
