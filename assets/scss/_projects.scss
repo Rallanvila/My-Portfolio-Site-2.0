@@ -15,6 +15,9 @@
 		max-width: $max-width;
 		.filter-btn{
 			margin: 10px;
+			&:hover{
+				font-size: 1rem;
+			}
 		}
 		.filter-btn.active{
 			background-color: darken($color-bg, 5%);
