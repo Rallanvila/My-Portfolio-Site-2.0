@@ -369,6 +369,22 @@ closeBtn18.onclick = function() {
 // 		modal12.stsplashyle.display = 'none';
 // 	}
 // };
+let modalBtn19 = document.getElementById('pressure-btn');
+let modal19 = document.querySelector('.pressure-modal');
+let closeBtn19 = document.querySelector('.pressure-close-btn');
+modalBtn19.onclick = function() {
+	modal19.style.display = 'block';
+	overlay.classList.add('active');
+};
+closeBtn19.onclick = function() {
+	modal19.style.display = 'none';
+	overlay.classList.remove('active');
+};
+// window.onclick = function(e) {
+// 	if (event.target == modal) {
+// 		modal12.stsplashyle.display = 'none';
+// 	}
+// };
 //Email Capture========================
 window.onload = function() {
 	//VARIABLES=====

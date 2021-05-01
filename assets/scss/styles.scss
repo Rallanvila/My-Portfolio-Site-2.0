@@ -11,7 +11,6 @@
 	max-width: $max-width;
 	text-align: center;
 	h2{
-		font-weight: bold;
 		padding: 20px 0;
 	}
 	.about__profile-pic{
@@ -91,25 +90,49 @@
 	// @include flexContainer(row, center, center);
 	@include push--auto;
 	display:flex;
+	justify-content: flex-start;
 	max-width: $max-width;
-	margin: 50px auto;
-	h2{
-		padding-bottom: 30px;
-	}
-	p{
-	}
+	margin: 100px auto;
 	.experience__summary{
+		@include flexContainer(column, flex-start, flex-start);
 		width: 50%;
-		align-self: center;
 		padding-right: 100px;
+		.experience__summary--worked{
+			padding-bottom: 20px;
+			text-align: center !important;
+			justify-self: center !important;
+		}
+		a{
+			font-weight: 600;
+		}
+		img{
+			width: 80%;
+			margin: 0 auto;
+			padding-bottom: 40px;
+		}
+		.experience__summary--experience{
+			padding-bottom: 10px;
+		}
 	}
 	.experience__skills{
-		align-self: center;
+		display: flex;
+		justify-content: space-between;
+		align-self: space-between;
 		width: 50%;
-		flex-wrap: wrap;
+		// flex-wrap: wrap;
+		.experience__skills--grid-container{
+			// display: grid;
+			// grid-template-columns: repeat(4, 1fr);
+			// grid-template-rows: repeat(3, auto);
+			// justify-items: center;
+			// align-content: center;
+			// row-gap: 20px;
+			@include flexContainer(row, space-between, space-between);
+			flex-wrap: wrap;
+		}
 		.fab{
-			font-size: 80px;
-			padding: 20px;
+			font-size: 70px;
+			padding: 0 20px;
 			transition: color .4s ease-in-out;
 		}
 		.fa-react:hover {
@@ -144,6 +167,9 @@
 		}
 		.fa-sketch:hover{
 			color: #FDAD00;
+		}
+		.fa-wordpress:hover{
+			color: #35688E;
 		}
 	}
 }
@@ -415,6 +441,7 @@ footer {
 		h2{
 			padding-bottom: 20px;
 		}
+		margin: 40px auto;
 		.experience__summary{
 		@include flexContainer(column, center, center);
 		width: 90%;
@@ -429,6 +456,9 @@ footer {
 			width: 90%;
 			flex-wrap: wrap;
 			margin-bottom: 30px;
+			.experience__skills--grid-container{
+				justify-content: space-evenly;
+			}
 			.fab{
 				font-size: 60px;
 				padding: 20px;
