@@ -385,6 +385,22 @@ closeBtn19.onclick = function() {
 // 		modal12.stsplashyle.display = 'none';
 // 	}
 // };
+let modalBtn20 = document.getElementById('nsi-btn');
+let modal20 = document.querySelector('.nsi-modal');
+let closeBtn20 = document.querySelector('.nsi-close-btn');
+modalBtn20.onclick = function() {
+	modal20.style.display = 'block';
+	overlay.classList.add('active');
+};
+closeBtn20.onclick = function() {
+	modal20.style.display = 'none';
+	overlay.classList.remove('active');
+};
+// window.onclick = function(e) {
+// 	if (event.target == modal) {
+// 		modal12.stsplashyle.display = 'none';
+// 	}
+// };
 //Email Capture========================
 window.onload = function() {
 	//VARIABLES=====
